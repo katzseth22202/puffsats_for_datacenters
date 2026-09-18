@@ -1,0 +1,40 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+
+# Editor temp files
+*.swp
+*~
+.DS_Store
+
+# Claude Code (ignore the bulk skills library and local settings; track other .claude config)
+.claude/skills/
+.claude/settings.local.json
+
+# Codex local/private state; project-safe .codex/config.toml can still be tracked
+.codex/auth.json
+.codex/sessions/
+.codex/logs*
+.codex/*.sqlite*
+.codex/tmp/
+.codex/.tmp/
+
+# Scratch / working documents (todo lists, audit summaries, restart handoffs)
+todos/
+
+# Correspondence. Never commit a recipient's reply or any address.
+correspondence/
+
+# Python
+__pycache__/
+*.pyc
