@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage{PRIMEarxiv}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[style=numeric-comp, backend=biber]{biblatex}
+\addbibresource{references.bib}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}       % hyperlinks
+\renewcommand{\subsubsectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\sectionautorefname}{Section}
+\usepackage{amsmath}
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{siunitx}
+\usepackage{titling}
+\usepackage[none]{hyphenat}
+\usepackage{ragged2e}
+\sisetup{per-mode=symbol}
+% \usepackage{parskip}
+\usepackage{tabularx}
+\usepackage[version=4]{mhchem}
+\usepackage{fancyhdr}       % header
+\usepackage{graphicx}       % graphics
+\graphicspath{{images/}}    % organize your images and other figures under images/
+% Unit declarations carried over from the main paper so that material pasted in
+% from Balloon-Pulse-Propulsion compiles without further edits.
+\DeclareSIUnit{\year}{yr}
+\DeclareSIUnit{\bar}{bar} % siunitx removed \bar from the SI brochure; define it ourselves (renders identically)
+\DeclareSIUnit{\dBA}{dBA} % A-weighted decibels, used for launch-noise comparisons
+\DeclareSIUnit{\psf}{psf} % pounds per square foot, the conventional unit for sonic-boom overpressure
+\DeclareSIUnit{\barn}{b}  % nuclear cross-section unit
+
+%Header
+\pagestyle{fancy}
+\thispagestyle{empty}
+\rhead{ \textit{ }}
+
+% Update your Headers here
+\fancyhead[LO]{PuffSat Pulsed Propulsion}
+% \fancyhead[RE]{Firstauthor and Secondauthor} % Firstauthor et al. if more than 2 - must use \documentclass[twoside]{article}
+
+\newcommand{\subtitle}[1]{\def\thesubtitle{#1}}
+
+\pretitle{%
+  \begin{center}
+  \LARGE
+}
+\posttitle{%
+  \par\vskip0.5em%
+  {\large\textsl{\thesubtitle}}%
+  \end{center}%
+  \vskip1.5em
+}
+
+
+%% Title
+\title{PuffSat Pulsed Propulsion}
+\subtitle{A Speculative Application to Space Data Centers}
+
+\author{
+  Seth Katz \\
+  \texttt{katzseth22202@gmail.com} \\
+}
+
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{C}{>{\RaggedRight\arraybackslash}c}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}\label{sec:abstract}
+% TODO: the demand claim and the supply claim, in that order, with one falsifiable
+% number each. State which numbers are requirements and which are results.
+\end{abstract}
+
+\section{Introduction}\label{sec:introduction}
+% TODO: what an orbital data center is for, and why its mass budget is the problem
+% this architecture addresses.
+
+\section{Background}\label{sec:background}
+% TODO: candidate subsections, both with settled language in CONTEXT.md.
+%   - The siting latency ladder: Earth-Moon L4/L5 at 2.6 s, Sun-Earth L1/L2 at 10 s,
+%     Sun-Earth L4/L5 at ~16.6 min. The first two clear every batch and long-horizon
+%     agentic workload; the third does not.
+%   - Distance is not defense: distance buys interceptor transit time, adversary
+%     delta-v cost, and loss of deniability. It does not make an asset defensible.
+
+\section{AI And Citations Transparency Acknowledgement}\label{sec:transparency}
+% TODO: provenance and epistemic status. This section stays at the end. Placed before
+% the technical content it reads as a request for lowered standards; placed after, as
+% calibration. See CONTEXT.md, "Provenance disclosure". Do not stack credibility
+% discounts and do not write "crazy".
+
+\section{Copyright}\label{sec:copyright}
+\small
+\textcopyright\ Seth Katz. All rights reserved.
+
+
+%Bibliography
+\printbibliography
+
+
+\end{document}

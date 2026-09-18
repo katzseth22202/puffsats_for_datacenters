@@ -21,10 +21,21 @@ friction, not danger; a plain PDF is fine, while archives, Office files, and Dro
 deleted unread.
 
 The PDF is plain single-column with generous margins so it reads as a technical memo. Do not
-use the PRIME or arXiv paper template. A one-pager in a two-column journal template invites
-paper-grade scrutiny and inherits the visual identity of the speculative white paper.
+use the PRIME or arXiv paper template. A one-pager dressed as a paper invites paper-grade
+scrutiny and inherits the visual identity of the speculative white paper. The objection is to
+the paper costume, not to the column count; `PRIMEarxiv.sty` is itself single-column.
 
 Send plain text, not HTML with inline images. Never attach `.tex` source.
+
+### The companion proposal does not travel with these briefs
+
+`templateArxiv.tex` at the repository root is a separate document in the parent paper's arXiv
+format, carrying the orbital-data-center demand story at length. It goes to recipients who can
+judge demand and siting. It is not attached to Brief A or Brief B, and its styling is not a
+precedent for what those briefs attach. See **Companion proposal** in `CONTEXT.md`.
+
+The two prohibitions below, on data centers and on the paper template, are scoped to the
+briefs. They are not repealed by the existence of the companion.
 
 ## Shared skeleton, in order
 
@@ -160,9 +171,9 @@ physicist.
 
 - The Jupiter growth multiples, the compounding table, or Mass Interest. They read as
   speculative finance and will sink a physics email.
-- Data centers. The demand story belongs in the sun-synchronous piece, not here. The chain's
-  payoff runs to 2055, so "near-term application" is a claim the physics does not support in
-  a propulsion brief.
+- Data centers. The demand story belongs in the sun-synchronous piece and in the companion
+  proposal, not here. The chain's payoff runs to 2055, so "near-term application" is a claim
+  the physics does not support in a propulsion brief.
 - Any mention of priority, licensing, or Zenodo deposit as protection.
 - The words "crazy" or "not an expert".
 - A link to the `Balloon-Pulse-Propulsion` repository. Cite the Zenodo DOI instead. The

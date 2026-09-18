@@ -7,10 +7,20 @@
 *.out
 *.run.xml
 *.toc
+*.lof
+*.lot
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+*.xdv
+*.bbl-SAVE-ERROR
+*.bcf-SAVE-ERROR
 *.pdf
+
+# Figures are source, not build output, so they are tracked despite *.pdf above.
+!images/*.pdf
 
 # Editor temp files
 *.swp

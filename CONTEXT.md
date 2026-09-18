@@ -23,6 +23,17 @@ condition. An arXiv endorsement request is bounded; "is this interesting?" is no
 why the latter is never the stated ask even when it is the real motive.
 _Avoid_: treating "please review my paper" as bounded.
 
+**Companion proposal** (settled 2026-09-18):
+The standalone document at the repository root, `templateArxiv.tex`, built in the parent
+paper's arXiv format and carrying the orbital-data-center demand story at length. Its
+recipients are the people who can judge demand and siting, not propulsion physicists, and it
+is the one place in this repository where the data-center case is argued rather than assumed.
+It does not travel with Brief A or Brief B. Those keep their plain one-page memo attachment.
+_Avoid_: attaching it to a physics brief (the Jupiter chain's payoff runs to 2055, so
+"near-term application" is not a claim a propulsion brief can carry); calling it a brief, since
+it carries no bounded ask and is not addressed to one named person; treating its arXiv styling
+as a precedent for brief attachments.
+
 **Homework-first principle** (settled 2026-09-18):
 No brief may ask a recipient to spend the first hour. Any question answerable from a public
 archive, solicitation, or dataset is answered before the brief is sent, and the brief asks
