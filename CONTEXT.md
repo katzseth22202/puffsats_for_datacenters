@@ -56,13 +56,18 @@ first two clear every batch and long-horizon agentic workload; the third does no
 _Avoid_: unqualified "L4/L5" (the Earth-Moon and Sun-Earth cases differ by ~400x in light
 time); citing intra-cluster latency figures against an Earth-customer budget.
 
-**Distance is not defense** (the siting argument's honest limit):
+**Distance buys engagement time** (renamed 2026-09-19 from "Distance is not defense"):
 Distance from Earth buys interceptor transit time, adversary delta-v cost, and loss of
-deniability. It does not make an asset defensible, and a published halo orbit is as
-predictable as a sun-synchronous one.
-_Avoid_: presenting a deep-space site as survivable rather than expensive to reach;
-citing the 2026 Gulf strikes on terrestrial data centers as precedent for an orbital
-intercept without naming the change in regime.
+deniability. Transit time is the load-bearing one, because an active response needs a window
+to act in. A direct-ascent ASAT reaches sun-synchronous orbit in minutes and leaves none:
+China destroyed FY-1C at 865 km in January 2007 with an SC-19, a modified DF-21. A transfer
+to an Earth-Moon Lagrange point takes days, which is enough to disperse a cluster or to
+engage the inbound vehicle. Distance does not hide the asset, and a published halo orbit is
+as predictable as a sun-synchronous one.
+_Avoid_: claiming survivability from distance alone, when the claim is that distance converts
+a no-notice strike into an engageable one; conflating the two precedents, since Iran's March
+2026 Shahed strikes on Gulf data centers were drones against buildings and FY-1C was a kill
+vehicle against a satellite. The first establishes intent, the second establishes reach.
 
 **Cycle autonomy** (the Jupiter chain's load-bearing claim, settled 2026-09-18):
 That once the growth cycle is seeded, delivering mass requires **no orbital-class reusable
