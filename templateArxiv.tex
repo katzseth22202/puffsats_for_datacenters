@@ -19,7 +19,7 @@
 \usepackage{titling}
 \usepackage[none]{hyphenat}
 \usepackage{ragged2e}
-\sisetup{per-mode=symbol}
+\sisetup{per-mode=symbol, range-units=single}
 % \usepackage{parskip}
 \usepackage{tabularx}
 \usepackage[version=4]{mhchem}
@@ -60,10 +60,6 @@
 %% Title
 \title{PuffSat Pulsed Propulsion}
 \subtitle{A Speculative Application to Space Data Centers}
-A holy grail for space propulsion is a rocket that offers high specific impulse and sufficient thrust to reach orbit.   Pulsed propulsion, like Project Orion and its successors, theoretically provides this.  It failed because it produces fallout, risks proliferating mass produced nuclear bombs, and can't easily be scaled down to small explosions.  A satellite launched from Earth can use a Jupiter gravity assist to return to Earth on a retrograde trajectory at speeds up to \siunitx{70}{\kilo\meter\per\second}.  Recent progress on tight satellite formations means we can aim a target rocket at a sequence of precisely times satellites and use their energy with a pusher plate, like Orion.  These satellites, which we'll call PuffSats, explode to gas before hitting the plate rather than pulverize it.   If we mix this exploding gas with gas sprayed in front of the plate by the target rocket, we can launch even greater mass to orbit for a given PuffSat gas mass.   We can also mix an incoming impactor with a significantly larger amount of mass inside a de Laval nozzle and use the resulting fireball to move in the direction the impactor came from, even though the impactor's momentum cancel some of the rocket's momentum.
-
-We briefly describe how to use this idea with a focus on a motivating example of pushing data centers into orbit.  We will also argue these data centers should be put in high orbits or Lagrange points rather than sun synchronous orbits.   Unfortunately, Iran has demonstrated data centers will be targeted in combat.   For our system to be competitive with fully reusable rockets it must therefore match the cost of launching mass to these high orbits.   We assume this implies initial costs of \$400 \si{\per\kilo\gram} and speculate on how we would reach this price.   This document is a narrower more focused look at the idea, which is much more exhaustively considered in the companion white paper \textit{Aim Is All You Need}~\cite{katz2026aim}.  That paper is a pretty long read, less well vetted, and was initially focused on laying the groundwork for hard science fiction, whereas this paper is intended to provide a more focused plausible initial look at the technology using data centers as a motivating example. 
-
 \author{
   Seth Katz \\
   \texttt{katzseth22202@gmail.com} \\
@@ -76,8 +72,20 @@ We briefly describe how to use this idea with a focus on a motivating example of
 \maketitle
 
 \begin{abstract}\label{sec:abstract}
-% TODO: the demand claim and the supply claim, in that order, with one falsifiable
-% number each. State which numbers are requirements and which are results.
+% Elevator pitch. The hook, then just enough context to know what the paper is.
+% The siting argument, its citations, and the cost case belong in the body.
+% See docs/brief_guide.md and CONTEXT.md.
+Project Orion got high specific impulse and enough thrust to reach orbit at once.  It needed nuclear
+bombs.  We get the same pulses from satellites that a Jupiter gravity assist has already accelerated
+to \SIrange{45}{68}{\kilo\meter\per\second}, so the energy is neither launched nor carried.  These
+satellites, which we call PuffSats, burst to gas before reaching the pusher plate of the target
+rocket, the vehicle being pushed, so the plate is struck by vapor rather than a solid.  Mixing that
+vapor with gas sprayed from the plate lets a rocket accelerate toward the oncoming impactor.
+
+The motivating example puts data centers at Lagrange points, days from an attacker rather than
+minutes, at \$400/\si{\kilo\gram}.  The closing speeds follow from orbital mechanics.  The
+efficiencies that make them pay are requirements, not results.  The full architecture is in the
+companion paper \textit{Aim Is All You Need}~\cite{katz2026aim}.
 \end{abstract}
 
 \section{Introduction}\label{sec:introduction}
@@ -89,8 +97,19 @@ We briefly describe how to use this idea with a focus on a motivating example of
 %   - The siting latency ladder: Earth-Moon L4/L5 at 2.6 s, Sun-Earth L1/L2 at 10 s,
 %     Sun-Earth L4/L5 at ~16.6 min. The first two clear every batch and long-horizon
 %     agentic workload; the third does not.
-%   - Distance is not defense: distance buys interceptor transit time, adversary
-%     delta-v cost, and loss of deniability. It does not make an asset defensible.
+%   - Distance buys engagement time. The whole argument lives here. The abstract only
+%     teases it ("days from an attacker rather than minutes"). Two precedents, kept
+%     separate:
+%       intent: Iran's Shahed strikes on AWS data centers in the UAE, 1 March 2026, the
+%         first deliberate wartime targeting of commercial data centers. Drones against
+%         buildings, so this establishes motive and nothing about orbital reach.
+%       reach: China's FY-1C intercept, 11 January 2007, sun-synchronous at 865 km and
+%         98.8 deg, killed by an SC-19 (modified DF-21) kill vehicle at 8 km/s closing.
+%         A ballistic missile against a satellite. This is the one that bears on siting.
+%     The countermeasures days of warning enable and minutes do not: dispersal of the
+%     cluster, and interception of the inbound vehicle. State the honest limit alongside.
+%     A published halo orbit is as predictable as a sun-synchronous one, so this is an
+%     engagement-time argument and not a concealment one.
 
 % \appendix takes no argument; it only switches \section numbering to A, B, C.
 % The banner below is set by hand, a notch larger than \section (which PRIMEarxiv
