@@ -34,6 +34,19 @@ _Avoid_: attaching it to a physics brief (the Jupiter chain's payoff runs to 205
 it carries no bounded ask and is not addressed to one named person; treating its arXiv styling
 as a precedent for brief attachments.
 
+**Inherited citation** (settled 2026-09-20):
+A bibliography entry copied down from `references.bib` in `katzseth22202/Balloon-Pulse-Propulsion`
+with its key and its `note` field intact, rather than written fresh here. The parent is a
+sprawling exploration and its 488 entries already source most of what this repository argues.
+This repository is a tight summary of the data-center case, so a source it needs is almost always
+a source the parent has. Two entries for one fact make a reader stop and check whether the two
+documents claim the same thing. The AI use disclosure is the exception, since it reports which
+tools were used on this document and that is a local fact.
+_Avoid_: searching the parent by a guessed key, since its keys are descriptive rather than
+name-and-year (`nasa_odqn2007_fengyun`, `kan2007_asat`) and a near miss silently duplicates;
+keeping a corrected local variant of a parent entry instead of correcting the parent and copying
+it down.
+
 **Homework-first principle** (settled 2026-09-18):
 No brief may ask a recipient to spend the first hour. Any question answerable from a public
 archive, solicitation, or dataset is answered before the brief is sent, and the brief asks
