@@ -3,9 +3,14 @@
 % Bibliography for PuffSat Pulsed Propulsion: A Speculative Application to Space
 % Data Centers. Loaded by templateArxiv.tex via biblatex/biber.
 %
-% Add entries as sources are actually read, not in advance. Entries may be copied
-% across from the references.bib in katzseth22202/Balloon-Pulse-Propulsion when a
-% claim here leans on the same source.
+% Add entries as sources are actually read, not in advance.
+%
+% Entries come from the references.bib in katzseth22202/Balloon-Pulse-Propulsion,
+% copied down with the key and the note field intact. Search that file by author,
+% title, or URL before writing anything new here; its keys are descriptive rather
+% than name-and-year, so a guessed key misses entries that exist. See "Inherited
+% citation" in CONTEXT.md. The AI use disclosure below is the exception, because it
+% reports which tools were used on this document.
 
 % --- The parent paper -------------------------------------------------------
 % Concept DOI (10.5281/zenodo.16741183), which resolves to the latest version.
@@ -103,4 +108,27 @@
   day          = {1},
   url          = {https://theconversation.com/why-iran-targeted-amazon-data-centers-and-what-that-does-and-doesnt-change-about-warfare-278642},
   urldate      = {2026-09-19},
+}
+
+% --- Prior art and comparison vehicle ---------------------------------------
+% Both copied unchanged from katzseth22202/Balloon-Pulse-Propulsion.
+
+@article{projorion,
+  author = {Schmidt, George R. and Bonometti, J. A. and Morton, P. J.},
+  title = {Project {Orion} and Future Prospects for Nuclear Pulse Propulsion},
+  journal = {Journal of Propulsion and Power},
+  volume = {18},
+  number = {3},
+  pages = {497--504},
+  year = {2002},
+  doi = {10.2514/2.5969},
+  note = {Peer-reviewed journal version of AIAA 2000-3856 (preprint at NTRS \url{https://ntrs.nasa.gov/citations/20000096503}). Both claims attached to this cite in the paper (high-Isp/high-power-density combined performance and sacrificial graphite-based ablative coating on the pusher plate) are present in the journal-submission draft text. Also states that pusher-plate ablation limits propellant impingement velocity to roughly 100--200 km/s.}
+}
+
+@misc{starship,
+  author = {{SpaceX}},
+  title = {SpaceX Starship},
+  year = {2025},
+  howpublished = {\url{https://www.spacex.com/vehicles/starship/}},
+  note = {Accessed: 2025-07-02}
 }
