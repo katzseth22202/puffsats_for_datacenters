@@ -86,24 +86,30 @@ The broader architectural implications of PuffSat propulsion are explored in the
 \end{abstract}
 
 \section{Introduction}\label{sec:introduction}
+PuffSat Pulsed Propulsion uses small satellites sent on Jupiter gravity assists to deliver
+high-speed gas pulses to a receiving spacecraft. It combines the external pulses of nuclear-pulse
+propulsion with the delivered mass of pellet-beam concepts. This paper sketches one candidate
+architecture and examines whether it could launch large orbital data centers at a price competitive
+with fully reusable launch vehicles.
+
 Pushing a spacecraft with mass supplied from outside it is an old idea with one persistent
 obstacle. Singer proposed an unguided pellet stream thrown by an electromagnetic mass driver in
 1979~\cite{singer1979interstellar}. Nordley replaced the unguided pellets with self-steering
 particles~\cite{nordley2001interstellar}, Kare replaced the mass driver with laser-driven miniature
 sails~\cite{kare2001sailbeam}, and Davoyan is working on accelerating pellets by laser
 ablation~\cite{davoyan2023pelletbeam}. Nordley and Crowl survey the family~\cite{nordley2015massbeam}.
-Every one of these designs needs an accelerator that has never been built, at a scale set by
-interstellar ambitions. That missing accelerator, rather than the impact physics, is where the family
-has stalled.
+These proposals rely on dedicated acceleration systems sized for interstellar missions.
 
-PuffSat Pulsed Propulsion removes the accelerator. A PuffSat reaches hypervelocity on a Jupiter
-gravity assist, so the closing speed is bought with orbital mechanics and paid for by the same
-conventional rockets that launched it. Two prerequisites replace the accelerator, cheap bulk launch
-and precise terminal guidance, and both have flight heritage. The companion white paper \textit{Aim
-Is All You Need}~\cite{katz2026aim} compares this architecture to each of the designs above in its
-section ``Comparison To Pellet Beam Propulsion Prior Art,'' and that comparison is not repeated here.
+PuffSat Pulsed Propulsion uses a Jupiter gravity assist to accelerate the incoming mass. Its
+feasibility depends on affordable launch and precise spacecraft coordination. Progress in relative
+navigation and formation control gives reason to examine this approach now. PRISMA demonstrated
+autonomous relative navigation and control in orbit~\cite{damico2011prisma_safe}, while the VISORS
+mission design develops these capabilities for a precision CubeSat formation~\cite{guffanti2023autonomous}.
+Whether they can support a swarm delivering gas pulses onto a receiving spacecraft after years in
+transit remains an open question. The companion white paper \textit{Aim Is All You Need}~\cite{katz2026aim}
+compares this architecture with earlier pellet-beam proposals.
 
-The design problems that remain are not the ones the pellet beam family faced. A PuffSat must arrive
+Several design problems remain. A PuffSat must arrive
 as gas, with no solid fragment large enough to damage the plate it hits. It must be guided onto that
 plate at the end of a transfer measured in years. A large swarm of PuffSats must fly in formation.
 The collision must transfer energy and momentum efficiently enough for the architecture to beat the
@@ -111,8 +117,8 @@ rocket that launched the PuffSats.
 % Each of the four challenges above wants an \autoref pointer to the section that takes it on.
 % Attach them once those sections exist; today only sec:background does.
 
-This paper sketches one PuffSat architecture, sized to launch large orbital data centers at a price
-competitive with fully reusable launch vehicles. Where those data centers sit is not a free choice.
+For the data-center application, the launch-cost comparison depends on the destination, which must
+satisfy both latency and survivability requirements.
 Iran's drone strikes on Amazon's Gulf data centers in March 2026 established that data centers are
 wartime targets~\cite{cnbc2026_aws_strike,gatech2026_aws_strike}. Those were drones against
 buildings, so they say nothing about orbital reach. China's destruction of the FY-1C weather
@@ -123,9 +129,8 @@ days, at a cost of \SI{2.6}{\second} of round-trip light time to an Earth custom
 hide a data center, and a published halo orbit is as predictable as a sun-synchronous one. What
 distance buys is the time an active response needs.
 
-\autoref{sec:background} develops that siting argument and the latency ladder behind it. The launch
-cost this architecture has to beat depends on where the cluster sits, so the siting question and the
-cost target are settled together.
+\autoref{sec:background} develops that siting argument and the latency ladder behind it, establishing
+the destination against which launch costs must be compared.
 
 \section{Background}\label{sec:background}
 
