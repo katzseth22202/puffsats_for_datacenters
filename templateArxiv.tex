@@ -75,13 +75,14 @@
 % Elevator pitch. The hook, then just enough context to know what the paper is.
 % The siting argument, its citations, and the cost case belong in the body.
 % See docs/brief_guide.md and CONTEXT.md.
-High-thrust, high-specific-impulse propulsion is the holy grail for rocket engines. Nuclear-pulse concepts such as Project Orion~\cite{projorion} demonstrated that externally supplied, high-energy pulses can break the chemical-propulsion tradeoff, but at the unacceptable cost of nuclear explosives.
+High-thrust, high-specific-impulse propulsion is a long-standing goal of rocket propulsion. Nuclear-pulse concepts such as Project Orion~\cite{projorion} showed in principle how externally supplied, high-energy pulses could escape the traditional chemical-propulsion tradeoff between thrust and specific impulse, but at the unacceptable cost of using nuclear explosives.
 
-This paper introduces \textit{PuffSat Pulsed Propulsion}, a non-nuclear analogue of Orion that uses small satellites dubbed PuffSats sent on Jupiter-assist trajectories and returned to Earth at \SIrange{55}{68}{\kilo\meter\per\second}, carrying \SIrange{1.5}{2.3}{\giga\joule\per\kilogram} of kinetic energy. Shortly before intercept, each PuffSat disperses into gas that impacts a pusher plate, where additional onboard propellant is injected and mixed with the incoming plasma, amplifying momentum transfer.  Alternatively, the fireball mixes in a pulsed nozzle chamber to provide directional thrust, including in the head-on direction.
+This paper introduces \textit{PuffSat Pulsed Propulsion}, a non-nuclear analogue of Orion in which small satellites, dubbed PuffSats, are sent on Jupiter-gravity-assist trajectories that return them to Earth at \SIrange{55}{68}{\kilo\meter\per\second}, corresponding to \SIrange{1.5}{2.3}{\giga\joule\per\kilogram} of kinetic energy. Shortly before intercepting the target vehicle, each PuffSat disperses into gas, which strikes a pusher plate. Additional propellant carried by the target vehicle is injected into and mixed with the resulting plasma, increasing the momentum transferred per kilogram of returning PuffSat mass. Alternatively, the incoming material can mix with injected propellant inside a pulsed nozzle chamber, allowing the resulting expansion to produce directed thrust, including thrust toward the oncoming PuffSat.
 
-We explain one proposed PuffSat architecture. As a motivating application, we evaluate a design focused on launching large orbital data centers with launch costs that could be competitive with near-term reusable launch systems like SpaceX Starship~\cite{starship}.
+We develop one candidate PuffSat architecture and evaluate its performance. As a motivating application, we consider the launch of large orbital data centers and examine whether such a system could achieve launch costs competitive with near-term fully reusable launch vehicles such as SpaceX Starship~\cite{starship}.
 
-Broader architectural implications are explored in the companion paper \textit{Aim Is All You Need}~\cite{katz2026aim}.
+The broader architectural implications of PuffSat propulsion are explored in the companion paper \textit{Aim Is All You Need}~\cite{katz2026aim}.
+
 \end{abstract}
 
 \section{Introduction}\label{sec:introduction}
