@@ -86,11 +86,46 @@ The broader architectural implications of PuffSat propulsion are explored in the
 \end{abstract}
 
 \section{Introduction}\label{sec:introduction}
-\textit{PuffSat Pulsed Propulsion} uses a stream of small satellites ("PuffSats") moving at hypervelocity to achieve high-thrust high-specific-impulse rocket engines.  The PuffSats explode and their gas mixes with gas injected by the target rocket they are propelling.  This gas mixing transfers momentum and produces a high energy density fireball that pushes the target rocket.   The concept is inspired by Project Orion~\cite{projorion} and by pellet beam propulsion concepts, a family that runs from Singer's unguided pellet stream~\cite{singer1979interstellar} through Nordley's self-steering particles~\cite{nordley2001interstellar} and Kare's SailBeam~\cite{kare2001sailbeam} to Davoyan's laser-ablation pellet beam~\cite{davoyan2023pelletbeam}. Nordley and Crowl survey the wider mass-beam family~\cite{nordley2015massbeam}. The companion white paper~\cite{katz2026aim} compares PuffSats to each of these in its section ``Comparison To Pellet Beam Propulsion Prior Art,'' and that comparison is not repeated here.  
+Pushing a spacecraft with mass supplied from outside it is an old idea with one persistent
+obstacle. Singer proposed an unguided pellet stream thrown by an electromagnetic mass driver in
+1979~\cite{singer1979interstellar}. Nordley replaced the unguided pellets with self-steering
+particles~\cite{nordley2001interstellar}, Kare replaced the mass driver with laser-driven miniature
+sails~\cite{kare2001sailbeam}, and Davoyan is working on accelerating pellets by laser
+ablation~\cite{davoyan2023pelletbeam}. Nordley and Crowl survey the family~\cite{nordley2015massbeam}.
+Every one of these designs needs an accelerator that has never been built, at a scale set by
+interstellar ambitions. That missing accelerator, rather than the impact physics, is where the family
+has stalled.
 
-Primary challenges for \textit{PuffSat Pulsed Propulsion} include sending gas to a pusher plate without large solid shrapnel; navigation, guidance and control; formation flying a large swarm of small satellites; and efficient energy and momentum transfer to the plate.   
+PuffSat Pulsed Propulsion removes the accelerator. A PuffSat reaches hypervelocity on a Jupiter
+gravity assist, so the closing speed is bought with orbital mechanics and paid for by the same
+conventional rockets that launched it. Two prerequisites replace the accelerator, cheap bulk launch
+and precise terminal guidance, and both have flight heritage. The companion white paper \textit{Aim
+Is All You Need}~\cite{katz2026aim} compares this architecture to each of the designs above in its
+section ``Comparison To Pellet Beam Propulsion Prior Art,'' and that comparison is not repeated here.
 
-In this paper, we sketch a PuffSat architecture intended to launch large space orbital data centers at prices that are competitive with fully reusable systems.   We also observe that space data centers must be well above sun synchronous orbit if we must adapt to the precedent unfortunately established by Iran in 2026 that data centers will be targets in warfare~\cite{cnbc2026_aws_strike,gatech2026_aws_strike}.  This has major implications on mission architecture, use cases, and the target launch cost we assume is competitive.   For a much more extended look at possible variations on PuffSat missions, see the companion white paper \textit{Aim Is All You Need}~\cite{katz2026aim}. 
+The design problems that remain are not the ones the pellet beam family faced. A PuffSat must arrive
+as gas, with no solid fragment large enough to damage the plate it hits. It must be guided onto that
+plate at the end of a transfer measured in years. A large swarm of PuffSats must fly in formation.
+The collision must transfer energy and momentum efficiently enough for the architecture to beat the
+rocket that launched the PuffSats.
+% Each of the four challenges above wants an \autoref pointer to the section that takes it on.
+% Attach them once those sections exist; today only sec:background does.
+
+This paper sketches one PuffSat architecture, sized to launch large orbital data centers at a price
+competitive with fully reusable launch vehicles. Where those data centers sit is not a free choice.
+Iran's drone strikes on Amazon's Gulf data centers in March 2026 established that data centers are
+wartime targets~\cite{cnbc2026_aws_strike,gatech2026_aws_strike}. Those were drones against
+buildings, so they say nothing about orbital reach. China's destruction of the FY-1C weather
+satellite at \SI{865}{\kilo\meter} in January 2007 says a great deal~\cite{kelso2007asat,nasa_odqn_2007}.
+A direct-ascent interceptor arrives at sun-synchronous altitude in minutes, which leaves no window to
+disperse a cluster or to engage the inbound vehicle. A transfer to an Earth-Moon Lagrange point takes
+days, at a cost of \SI{2.6}{\second} of round-trip light time to an Earth customer. Distance does not
+hide a data center, and a published halo orbit is as predictable as a sun-synchronous one. What
+distance buys is the time an active response needs.
+
+\autoref{sec:background} develops that siting argument and the latency ladder behind it. The launch
+cost this architecture has to beat depends on where the cluster sits, so the siting question and the
+cost target are settled together.
 
 \section{Background}\label{sec:background}
 
