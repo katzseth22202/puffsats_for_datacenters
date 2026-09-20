@@ -86,37 +86,23 @@ The broader architectural implications of PuffSat propulsion are explored in the
 \end{abstract}
 
 \section{Introduction}\label{sec:introduction}
-PuffSat Pulsed Propulsion uses small satellites sent on Jupiter gravity assists to deliver
-high-speed gas pulses to a receiving spacecraft. It combines the external pulses of nuclear-pulse
-propulsion with the delivered mass of pellet-beam concepts. This paper sketches one candidate
-architecture and examines whether it could launch large orbital data centers at a price competitive
-with fully reusable launch vehicles.
 
-Pushing a spacecraft with mass supplied from outside it is an old idea with one persistent
-obstacle. Singer proposed an unguided pellet stream thrown by an electromagnetic mass driver in
-1979~\cite{singer1979interstellar}. Nordley replaced the unguided pellets with self-steering
-particles~\cite{nordley2001interstellar}, Kare replaced the mass driver with laser-driven miniature
-sails~\cite{kare2001sailbeam}, and Davoyan is working on accelerating pellets by laser
-ablation~\cite{davoyan2023pelletbeam}. Nordley and Crowl survey the family~\cite{nordley2015massbeam}.
-These proposals rely on dedicated acceleration systems sized for interstellar missions.
+PuffSat Pulsed Propulsion uses small satellites sent on Jupiter gravity-assist trajectories to deliver high-speed gas pulses to a receiving spacecraft. It combines ideas from nuclear-pulse propulsion and external pellet-beam concepts. This paper sketches one candidate architecture and examines whether it could eventually launch large orbital data centers at costs competitive with fully reusable launch vehicles.
 
-PuffSat Pulsed Propulsion uses a Jupiter gravity assist to accelerate the incoming mass. Its
-feasibility depends on affordable launch and precise spacecraft coordination. Progress in relative
-navigation and formation control gives reason to examine this approach now. PRISMA demonstrated
-autonomous relative navigation and control in orbit~\cite{damico2011prisma_safe}, while the VISORS
-mission design develops these capabilities for a precision CubeSat formation~\cite{guffanti2023autonomous}.
-Whether they can support a swarm delivering gas pulses onto a receiving spacecraft after years in
-transit remains an open question. The companion white paper \textit{Aim Is All You Need}~\cite{katz2026aim}
-compares this architecture with earlier pellet-beam proposals.
+Pushing a spacecraft with mass supplied from outside it is an old idea, but a central challenge is how to accelerate that mass to extreme speeds. Singer proposed an unguided pellet stream accelerated by an electromagnetic mass driver in 1979~\cite{singer1979interstellar}. Nordley replaced the unguided pellets with self-steering particles~\cite{nordley2001interstellar}; Kare replaced the mass driver with laser-driven miniature sails~\cite{kare2001sailbeam}; and Davoyan is investigating the acceleration of pellets by laser ablation~\cite{davoyan2023pelletbeam}. Nordley and Crowl survey this broader family of concepts~\cite{nordley2015massbeam}. These proposals generally rely on dedicated acceleration systems sized for interstellar missions. The companion white paper, \textit{Aim Is All You Need}~\cite{katz2026aim}, compares the present architecture with earlier pellet-beam proposals in greater detail.
 
-Several design problems remain. A PuffSat must arrive
-as gas, with no solid fragment large enough to damage the plate it hits. It must be guided onto that
-plate at the end of a transfer measured in years. A large swarm of PuffSats must fly in formation.
-The collision must transfer energy and momentum efficiently enough for the architecture to beat the
-rocket that launched the PuffSats.
-% Each of the four challenges above wants an \autoref pointer to the section that takes it on.
-% Attach them once those sections exist; today only sec:background does.
+\textit{PuffSat Pulsed Propulsion} instead uses Jupiter gravity assists to accelerate the incoming mass. Its feasibility therefore depends less on constructing a dedicated accelerator and more on achieving sufficiently inexpensive launch, repeatable trajectories, and precise spacecraft coordination. Progress in relative navigation and formation control provides reason to examine this approach now. PRISMA demonstrated autonomous relative navigation and control in orbit~\cite{damico2011prisma_safe}, while the VISORS mission develops these capabilities for a precision CubeSat formation~\cite{guffanti2023autonomous}. For PuffSats, individual terminal-guidance requirements may be less stringent than science based formation-flying missions, but the system must still coordinate a much larger formation with a few centimeters precision over a much larger swarm separation distance. We discuss these requirements in \autoref{sec:guidance_navigation}.
 
+Each PuffSat must transport a low-cost energetic material, probably an ammonium nitrate emulsion, through a long interplanetary trajectory while maintaining acceptable thermal and safety margins. The nonvolatile dry mass hardware must miss the target rocket and the volatiles must form a plume with optimal shaping for efficient momentum and energy transfer. We describe one spin-stabilized PuffSat architecture intended to accomplish these functions in \autoref{sec:puffsat_satellite_architecture}.
+
+PuffSats must travel on repeatable trajectories to Jupiter and back. We discuss the choice of Jovian trajectories and the associated radiation, thermal, and $\Delta v$ requirements in \autoref{sec:jupiter_gravity_assists}. Candidate pusher-plate and pulsed-nozzle architectures are considered in \autoref{sec:pusher_plates} and \autoref{sec:rocket_nozzles}. If returning PuffSats can ultimately launch more PuffSat mass onto subsequent Jupiter-assist trajectories than was required to launch them, the system admits a bootstrapping cycle in which available returning mass grows from one generation to the next. In that regime, the cost of the initial conventional launch becomes progressively less important. We examine this proposed growth cycle and its implications in \autoref{sec:exponential_mass_growth}.
+
+We then consider large orbital data centers as a motivating application. We first examine the vulnerability of low-Earth-orbit data-center constellations to terrestrial anti-satellite capabilities, using recent Iranian attacks on terrestrial data-center infrastructure as the basis for considering the security of concentrated computing infrastructure; see \autoref{sec:data_center_attacks}. We then make a deliberately speculative comparison between early PuffSat launch costs and those of a reusable rocket system, assuming that neither has reached a fully mature post-2040s operating cadence; see \autoref{sec:launch_cost_speculation}.
+
+Finally, \autoref{sec:conclusion} identifies the major unresolved questions and invites expert criticism and collaboration. For context, the companion white paper originally began as technical groundwork for hard science fiction. Further analysis suggested that narrower applications of the underlying concept might be worth examining as real engineering systems. The present work should therefore be read as a high-level feasibility proposal rather than a mature propulsion design. Its purpose is to expose the assumptions, identify potential failure modes, and solicit technical criticism from researchers with relevant expertise.
+
+
+\section{Data Centers, Anti-Satellite Weapons, And Launch Costs}\label{sec:data_center_attacks}
 For the data-center application, the launch-cost comparison depends on the destination, which must
 satisfy both latency and survivability requirements.
 Iran's drone strikes on Amazon's Gulf data centers in March 2026 established that data centers are
@@ -128,11 +114,15 @@ disperse a cluster or to engage the inbound vehicle. A transfer to an Earth-Moon
 days, at a cost of \SI{2.6}{\second} of round-trip light time to an Earth customer. Distance does not
 hide a data center, and a published halo orbit is as predictable as a sun-synchronous one. What
 distance buys is the time an active response needs.
+\section {PuffSat Satellite Architecture}\label{sec:puffsat_satellite_architecture}
+\section{Guidance And Navigation}\label{sec:guidance_navigation}
+\section{Pusher Plates}\label{sec:pusher_plates}
+\section{Pulsed Rocket Nozzles}\label{sec:rocket_nozzles}
+\section{Jupiter Gravity Assist Details}\label{sec:jupiter_gravity_assists}
+\section{Exponential Mass Growth}\label{sec:exponential_mass_growth}
+\section{Launch Cost Speculation}\label{sec:launch_cost_speculation}
+\section{Conclusion}\label{sec:conclusion}
 
-\autoref{sec:background} develops that siting argument and the latency ladder behind it, establishing
-the destination against which launch costs must be compared.
-
-\section{Background}\label{sec:background}
 
 \appendix
 \bigskip
