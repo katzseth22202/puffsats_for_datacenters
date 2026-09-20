@@ -99,15 +99,30 @@
   url          = {https://orbitaldebris.jsc.nasa.gov/quarterly-news/pdfs/odqnv11i2.pdf},
 }
 
-@online{murphy2026iran,
-  author       = {Murphy, Dennis},
-  title        = {Why {Iran} targeted {Amazon} data centers and what that does -- and doesn't -- change about warfare},
-  organization = {The Conversation},
+% The 2026 strikes on AWS data centers, cited in the Introduction. Both copied
+% unchanged from katzseth22202/Balloon-Pulse-Propulsion. The CNBC report carries
+% the event, the Georgia Tech piece carries the reading of it as precedent. An
+% earlier local entry for The Conversation's republication of the same Georgia
+% Tech analysis was dropped, since the parent already carries the article.
+
+@misc{cnbc2026_aws_strike,
+  author       = {{CNBC}},
+  title        = {Banking, Payments Services Disrupted After {Amazon} {UAE} Data Centers Hit in Drone Strikes},
   year         = {2026},
-  month        = {4},
-  day          = {1},
-  url          = {https://theconversation.com/why-iran-targeted-amazon-data-centers-and-what-that-does-and-doesnt-change-about-warfare-278642},
-  urldate      = {2026-09-19},
+  month        = mar,
+  howpublished = {\url{https://www.cnbc.com/2026/03/03/iran-war-uae-drone-strikes-aws-data-centers.html}},
+  urldate      = {2026-09-14},
+  note         = {Reports that Iranian drone strikes on 1 March 2026 knocked two of the ME-CENTRAL-1 region's three availability zones offline, disrupting banking and payment services across the region. Accessed: 2026-09-14}
+}
+
+@misc{gatech2026_aws_strike,
+  author       = {{Georgia Institute of Technology}},
+  title        = {Why {Iran} Targeted {Amazon} Data Centers and What That Does --- and Doesn't --- Change About Warfare},
+  year         = {2026},
+  month        = apr,
+  howpublished = {\url{https://news.gatech.edu/news/2026/04/01/why-iran-targeted-amazon-data-centers-and-what-does-and-doesnt-change-about-warfare}},
+  urldate      = {2026-09-14},
+  note         = {Institutional news analysis of the March 2026 drone strikes on Amazon Web Services data centers in the United Arab Emirates and Bahrain, the first deliberate military attack on hyperscale cloud infrastructure. Accessed: 2026-09-14}
 }
 
 % --- Prior art and comparison vehicle ---------------------------------------
@@ -131,4 +146,63 @@
   year = {2025},
   howpublished = {\url{https://www.spacex.com/vehicles/starship/}},
   note = {Accessed: 2025-07-02}
+}
+
+% --- Pellet beam propulsion prior art ---------------------------------------
+% Cited once in the Introduction, for the family PuffSats descend from. Copied
+% unchanged from katzseth22202/Balloon-Pulse-Propulsion, which compares the
+% architecture to each of these at length in "Comparison To Pellet Beam
+% Propulsion Prior Art". This document cites that section rather than repeating
+% the comparison.
+
+@techreport{singer1979interstellar,
+  title={Interstellar propulsion using a pellet stream for momentum transfer},
+  author={Singer, CE and others},
+  year={1979},
+  institution={Princeton Univ., NJ (USA). Plasma Physics Lab}
+}
+
+@inproceedings{nordley2001interstellar,
+  author    = {Nordley, Gerald D.},
+  title     = {Interstellar Probes Propelled by Self-Steering Momentum Transfer Particles},
+  booktitle = {Proceedings of the 52nd International Astronautical Congress},
+  series    = {IAF Paper},
+  number    = {IAA-01-IAA.4.1.05},
+  publisher = {International Astronautical Federation (IAF) / International Academy of Astronautics (IAA)},
+  address   = {Toulouse, France},
+  month     = oct,
+  year      = {2001},
+  howpublished = {\url{https://sacramentol5society.nss.org/novae/interstellar-probes-propelled-by-self-steering-momentum-transfer-particles/}},
+  note      = {Reprinted by the Sacramento L5 Society (NSS chapter). Accessed: 2026-05-17}
+}
+
+@inproceedings{kare2001sailbeam,
+  title={SailBeam: Space propulsion by macroscopic sail-type projectiles},
+  author={Kare, Jordin T},
+  booktitle={AIP Conference Proceedings},
+  volume={552},
+  number={1},
+  pages={402--406},
+  year={2001},
+  organization={American Institute of Physics}
+}
+
+@misc{davoyan2023pelletbeam,
+  author       = {Artur Davoyan},
+  title        = {Pellet-Beam Propulsion for Breakthrough Space Exploration},
+  year         = {2023},
+  month        = {1},
+  url          = {https://www.nasa.gov/general/pellet-beam-propulsion-for-breakthrough-space-exploration/},
+  note         = {NASA Phase I Proposal Summary},
+  institution  = {University of California, Los Angeles},
+  howpublished = {Online},
+}
+
+@article{nordley2015massbeam,
+  author  = {Nordley, Gerald D. and Crowl, Adam James},
+  title   = {Mass Beam Propulsion, An Overview},
+  journal = {Journal of the British Interplanetary Society},
+  volume  = {68},
+  pages   = {153--166},
+  year    = {2015}
 }
