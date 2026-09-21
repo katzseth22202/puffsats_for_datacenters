@@ -56,9 +56,6 @@
   \vskip1.5em
 }
 
-% Define custom units for year (using modern siunitx syntax)
-\DeclareSIUnit \yr {yr}
-
 %% Title
 \title{PuffSat Pulsed Propulsion}
 \subtitle{A Condensed Summary With Near Term Applications}
@@ -77,12 +74,12 @@
 % Elevator pitch. The hook, then just enough context to know what the paper is.
 % The siting argument, its citations, and the cost case belong in the body.
 % See docs/brief_guide.md and CONTEXT.md.
-High-thrust, high-specific-impulse propulsion is a long-standing goal of rocket design. Nuclear-pulse concepts such as Project Orion~\cite{projorion} showed in principle how externally-supplied, high-energy pulses could push a rocket to orbit with much less propellant than chemical rockets.
+Nuclear-pulse concepts such as Project Orion~\cite{projorion} showed in principle how externally supplied, high-energy pulses could push a rocket to orbit with far less propellant than a chemical rocket needs.
 
-This paper introduces \textit{PuffSat Pulsed Propulsion}, a non-nuclear analogue of Orion. PuffSats are small satellites sent on Jupiter gravity-assist trajectories that return them to Earth at \SIrange{55}{68}{\kilo\meter\per\second}, corresponding to \SIrange{1.5}{2.3}{\giga\joule\per\kilogram} of kinetic energy. The PuffSats complete the Earth–Jupiter–Earth round trip in roughly \SIrange{2.2}{3.3}{years}. Shortly before intercepting the target vehicle, each PuffSat payload explodes into a gaseous cloud, which strikes a pusher plate. Additional propellant carried by the target vehicle is injected into and mixed with the resulting plasma, increasing the momentum transferred per kilogram of returning PuffSat mass. Alternatively, the incoming material can mix with injected propellant inside a pulsed nozzle chamber, allowing the resulting expansion to produce directed thrust, including thrust toward the oncoming PuffSat.
+This paper introduces \textit{PuffSat Pulsed Propulsion}, a non-nuclear analogue of Orion. PuffSats are small satellites sent on Jupiter gravity-assist trajectories that bring them back to Earth on retrograde orbits. They arrive at \SIrange{55}{68}{\kilo\meter\per\second}, or \SIrange{1.5}{2.3}{\giga\joule\per\kilogram} of kinetic energy, more than a hundred times the \SI{11}{\mega\joule\per\kilogram} released by burning methane with oxygen~\cite{nist_webbook_methane}. The Earth--Jupiter--Earth round trip takes \SIrange{2.2}{3.3}{\year}. Shortly before reaching the receiving vehicle, each PuffSat payload explodes into a gas cloud, which strikes a pusher plate and stagnates into a plasma. The vehicle injects its own propellant into this plasma, increasing the momentum delivered per kilogram of PuffSat mass. Alternatively, the arriving material can mix with injected propellant inside a pulsed nozzle chamber. The expanding mixture then produces directed thrust, including thrust back toward the oncoming PuffSats.
 
-We outline one candidate PuffSat architecture and consider launching orbital data centers as a motivating
-application. Building on the broader architecture described in the companion paper \textit{Aim Is All You Need}~\cite{katz2026aim}, we examine whether PuffSats could achieve launch costs competitive with near-term fully reusable launch vehicles such as SpaceX Starship~\cite{starship}.
+We describe one candidate PuffSat design and take launching orbital data centers as a motivating application. Building on the broader architecture in the companion paper \textit{Aim Is All You Need}~\cite{katz2026aim}, we estimate PuffSat launch costs and find they could compete with near-term fully reusable vehicles such as SpaceX Starship~\cite{starship} if \textbf{[condition]}.
+% TODO: replace [condition] with the threshold computed in sec:launch_cost_speculation.
 \end{abstract}
 
 \section{Introduction}\label{sec:introduction}
@@ -90,7 +87,7 @@ Objects crossing Earth on retrograde heliocentric orbits carry specific kinetic 
 
 Large orbital data centers are a potential near-term market for very heavy lift. We compare speculative early PuffSat launch costs with those of a fully reusable rocket system serving the same destinations (see \autoref{sec:launch_cost_speculation}). If returning PuffSats can deliver enough momentum to send a greater mass of replacement PuffSats onto new Jupiter trajectories, the available returning mass can grow exponentially from cycle to cycle (\autoref{sec:exponential_mass_growth}). Once bootstrapped, this cycle could supply its own reaction mass without repeatedly launching that mass aboard an orbital-class reusable rocket. The initial conventional launch costs would therefore become progressively less important to the system's overall cost.
 
-PuffSat Pulsed Propulsion builds on advances in autonomous satellite formation flying. PRISMA demonstrated autonomous relative navigation and control in orbit~\cite{damico2011prisma_safe}, while the VISORS mission develops these capabilities for a precision CubeSat formation~\cite{guffanti2023autonomous}. PuffSat formations would be much larger, although their formation-keeping requirements would be less precise than those of science missions such as VISORS. PuffSats must also solve the distinct problem of hit-to-target guidance between the PuffSat swarm and the receiving vehicle. together with target-vehicle corrections between successive impacts (see \autoref{sec:guidance_navigation}).
+PuffSat Pulsed Propulsion builds on advances in autonomous satellite formation flying. PRISMA demonstrated autonomous relative navigation and control in orbit~\cite{damico2011prisma_safe}, while the VISORS mission develops these capabilities for a precision CubeSat formation~\cite{guffanti2023autonomous}. PuffSat formations would be much larger, although their formation-keeping requirements would be less precise than those of science missions such as VISORS. PuffSats must also solve the distinct problem of hit-to-target guidance between the PuffSat swarm and the receiving vehicle, together with target-vehicle corrections between successive impacts (see \autoref{sec:guidance_navigation}).
 
 Each PuffSat must carry a low-cost gas-forming payload through a long interplanetary trajectory. The payload must survive radiation and micrometeorites, and it must keep its contents and electronics within thermal limits. The PuffSat's dry mass components must not hit the receiving vehicle. We sketch a design satisfying these constraints in \autoref{sec:puffsat_satellite_architecture}. The required Jovian trajectories are described in \autoref{sec:jupiter_gravity_assists}. At the receiving vehicle, a pusher plate or pulsed nozzle must convert the arriving flow into thrust. Pusher plates are analyzed in \autoref{sec:pusher_plates}, and nozzles are discussed in \autoref{sec:rocket_nozzles}.
 
