@@ -172,8 +172,8 @@ physicist.
 - The Jupiter growth multiples, the compounding table, or Mass Interest. They read as
   speculative finance and will sink a physics email.
 - Data centers. The demand story belongs in the sun-synchronous piece and in the companion
-  proposal, not here. The chain's payoff runs to 2055, so "near-term application" is a claim
-  the physics does not support in a propulsion brief.
+  proposal, not here. The chain can start today but reaches data-center scale only around
+  2055, and a propulsion brief has no room to draw that distinction.
 - Any mention of priority, licensing, or Zenodo deposit as protection.
 - The words "crazy" or "not an expert".
 - A link to the `Balloon-Pulse-Propulsion` repository. Cite the Zenodo DOI instead. The
