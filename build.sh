@@ -57,20 +57,19 @@ run() {
 # but biber takes the jobname. Pass the jobname to both.
 run "pdflatex (pass 1/3)" pdflatex
 
-# biber is allowed to fail without killing the build. references.bib is empty and
-# nothing is cited yet, which biber reports as an error even though the document
-# typesets correctly. Once there are real citations, a nonzero exit here means a
-# real bibliography problem, so the message is always surfaced.
+# A nonzero biber exit means a real bibliography problem, so it stops the build.
+# Under --quiet the output is kept and shown only on failure.
 echo "==> biber"
 biber_status=0
 if [[ $QUIET -eq 1 ]]; then
-    biber "$JOB" >/dev/null 2>&1 || biber_status=$?
+    biber_log=$(biber "$JOB" 2>&1) || biber_status=$?
+    [[ $biber_status -ne 0 ]] && echo "$biber_log" >&2
 else
     biber "$JOB" || biber_status=$?
 fi
 if [[ $biber_status -ne 0 ]]; then
-    echo "    biber exited $biber_status. Expected while references.bib is empty and" >&2
-    echo "    nothing is cited. Investigate once the bibliography has entries." >&2
+    echo "Error: biber exited $biber_status. See $JOB.blg." >&2
+    exit "$biber_status"
 fi
 
 run "pdflatex (pass 2/3)" pdflatex

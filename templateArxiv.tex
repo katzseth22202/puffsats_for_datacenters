@@ -1,16 +1,10 @@
 \documentclass{article}
 
 \usepackage{PRIMEarxiv}
-\usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[style=numeric-comp, backend=biber]{biblatex}
 \addbibresource{references.bib}
 \usepackage[T1]{fontenc}
-\usepackage{hyperref}       % hyperlinks
-\renewcommand{\subsubsectionautorefname}{Section}
-\renewcommand{\subsectionautorefname}{Section}
-\renewcommand{\sectionautorefname}{Section}
 \usepackage{amsmath}
-\usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
@@ -33,11 +27,13 @@
 \DeclareSIUnit{\dBA}{dBA} % A-weighted decibels, used for launch-noise comparisons
 \DeclareSIUnit{\psf}{psf} % pounds per square foot, the conventional unit for sonic-boom overpressure
 \DeclareSIUnit{\barn}{b}  % nuclear cross-section unit
+\usepackage{hyperref}       % hyperlinks; loaded late so it can patch the packages above
+\renewcommand{\subsubsectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\sectionautorefname}{Section}
 
 %Header
 \pagestyle{fancy}
-\thispagestyle{empty}
-\rhead{ \textit{ }}
 
 % Update your Headers here
 \fancyhead[LO]{PuffSat Pulsed Propulsion}
@@ -70,12 +66,12 @@
 \begin{document}
 \maketitle
 
-\begin{abstract}\label{sec:abstract}
-Project Orion envisioned spacecraft that would combine high thrust with high specific impulse by using nuclear explosions for pulsed momentum transfer. This paper introduces \textit{PuffSat Pulsed Propulsion}, a non-nuclear kinetic analogue to Orion. In this architecture, small, low-cost satellites ("PuffSats") execute a rapid Earth--Jupiter--Earth gravity-assist loop, returning on retrograde orbits at Earth-relative speeds of \SIrange{55}{68}{\kilo\meter\per\second} in just 2.2 or 3.3 years (two or three Earth--Jupiter synodic periods). At these speeds, a PuffSat's kinetic energy per unit mass exceeds that released by methalox combustion by more than two orders of magnitude. As each PuffSat approaches the target vehicle, its working mass disperses into a gas cloud that mixes with propellant released by the target. The resulting fireball either strikes the target's pusher plate or is captured in a pulsed nozzle chamber that can produce thrust in any direction, including head-on toward the incoming PuffSats. We show that because launched payloads can include new PuffSats, this mechanism can sustain exponential growth in launch capacity that, once initiated, requires no further orbital-class chemical boosters.  Finally, we evaluate a PuffSat architecture optimized for launching orbital data centers and find that, under stated assumptions, it could undercut near-term fully reusable launch systems like SpaceX Starship~\cite{starship} on cost.
+\begin{abstract}
+Project Orion envisioned spacecraft that would combine high thrust with high specific impulse by using nuclear explosions for pulsed momentum transfer. This paper introduces \textit{PuffSat Pulsed Propulsion}, a non-nuclear kinetic analogue to Orion. In this architecture, small, low-cost satellites (``PuffSats'') execute a rapid Earth--Jupiter--Earth gravity-assist loop, returning on retrograde orbits at Earth-relative speeds of \qtyrange{55}{68}{\kilo\meter\per\second} in just 2.2 or 3.3 years (two or three Earth--Jupiter synodic periods). At these speeds, a PuffSat's kinetic energy per unit mass exceeds the energy per unit mass released by methalox combustion by more than two orders of magnitude. As each PuffSat approaches the target vehicle, its working mass disperses into a gas cloud that mixes with propellant released by the target. The resulting fireball either strikes the target's pusher plate or is captured in a pulsed nozzle chamber that can produce thrust in any direction, including head-on toward the incoming PuffSats. We argue that because launched payloads can include new PuffSats, this mechanism can sustain exponential growth in launch capacity that, once initiated, requires no further orbital-class chemical boosters. Finally, we evaluate a PuffSat architecture optimized for launching orbital data centers and find that, under the stated assumptions, it could undercut near-term fully reusable launch systems such as SpaceX Starship~\cite{starship} on cost.
 \end{abstract}
 
 \section{Introduction}\label{sec:introduction}
-Objects crossing Earth on retrograde heliocentric orbits carry specific kinetic energies roughly a hundred times the chemical energy densities of rocket fuel. \textit{PuffSat Pulsed Propulsion} seeks to convert this kinetic energy into high-specific-impulse, high-thrust propulsion. The concept builds on ideas from Project Orion and pellet-beam propulsion. Unlike most pellet-beam concepts (see \cite{katz2026aim}), PuffSats acquire their extreme velocities from natural orbital mechanics rather than hypothetical giant accelerators or nuclear explosions.
+Objects crossing Earth on retrograde heliocentric orbits carry specific kinetic energies roughly a hundred times the chemical energy densities of rocket fuel. \textit{PuffSat Pulsed Propulsion} converts this kinetic energy into high-specific-impulse, high-thrust propulsion. The concept builds on ideas from Project Orion and pellet-beam propulsion. Unlike most pellet-beam concepts (see \cite{katz2026aim}), PuffSats acquire their extreme velocities from natural orbital mechanics rather than hypothetical giant accelerators or nuclear explosions.
 
 Large orbital data centers are a potential near-term market for very heavy lift. We compare speculative early PuffSat launch costs with those of a fully reusable rocket system serving the same destinations (see \autoref{sec:launch_cost_speculation}). If returning PuffSats can deliver enough momentum to send a greater mass of replacement PuffSats onto new Jupiter trajectories, the available returning mass can grow exponentially from cycle to cycle (\autoref{sec:exponential_mass_growth}). Once bootstrapped, this cycle could supply its own reaction mass without repeatedly launching that mass aboard an orbital-class reusable rocket. The initial conventional launch costs would therefore become progressively less important to the system's overall cost.
 
