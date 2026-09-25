@@ -105,27 +105,7 @@ Data centers are now military targets. In March 2026, Iranian drones struck Amaz
 
 The director of the Space Development Agency says of his proliferated constellation that ``it will cost more to shoot down a single satellite than it will cost to build that single satellite''~\cite{hadley2023_tournear}. An orbital data center cannot spread out that way, because its nodes need high-bandwidth links to each other. Suncatcher's illustrative cluster puts 81 satellites, \qty{2.3}{\mega\watt} of computing, within a \qty{1}{\kilo\meter} radius~\cite{aguera2026_suncatcher}. If each satellite presents \qty{10}{\square\meter} to a cloud of \qty{1}{\gram} pellets, about \qty{300}{\kilo\gram} of pellets puts one expected hit on each~\cite{katz2026aim}. A Nodong-class missile can loft \qty{500}{\kilo\gram} of pellets to \qty{600}{\kilo\meter}. Such a weapon is marginal only because an unguided cloud misses by kilometers, and homing with commercial sensors is within reach of many countries~\cite{wright2005_physics_space_security}. Starcloud's panels would span about \qty{4}{\kilo\meter} on a side~\cite{nvidia2025_starcloud}, and a data center sheds nearly all its power as heat, so a seeker has an easy target.
 
-\begin{table}[htbp]
-\centering
-\small
-\caption{Candidate data-center sites. Uncited entries are two-body calculations that ignore plane changes. $\deltav$ is a Hohmann transfer from a \qty{300}{\kilo\meter} parking orbit, including the burn to match the site. Interceptor transit runs from a straight-up coast at \qty{14}{\kilo\meter\per\second} from \qty{200}{\kilo\meter} to a minimum-energy transfer, or to a coast at escape speed for Sun--Earth L1~\cite{katz2026aim}. The sun-synchronous transit is a ballistic climb to \qty{865}{\kilo\meter}, about \qty{8}{\minute} ignoring boost. Sun-synchronous drag assumes Suncatcher's \qty{575}{\kilo\gram} satellite~\cite{aguera2026_suncatcher} with about \qty{100}{\square\meter} of array face-on to the flow, enough for \qty{28}{\kilo\watt} at 20~percent cell efficiency. Earth--Moon L4/L5 eclipses assume the point crosses Earth's shadow at the Moon's synodic rate.}
-\label{tab:data_center_sites}
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.17\textwidth}*{5}{>{\raggedright\arraybackslash}X}@{}}
-\toprule
-Site & Round-trip latency & Interceptor transit & $\deltav$ from \qty{300}{\kilo\meter} & Station keeping & Eclipses \\
-\midrule
-Sun-synchronous, \qtyrange{600}{850}{\kilo\meter} & under \qty{0.01}{\second} & Minutes & \qtyrange{0.17}{0.30}{\kilo\meter\per\second} & \qtyrange{3}{50}{\meter\per\second} a year against drag~\cite{vallado_atmosexp}, plus formation keeping~\cite{aguera2026_suncatcher} & Seasonal, up to \qty{10}{\minute} per \qty{98}{\minute} orbit~\cite{nasa_hinode} \\
-\addlinespace
-High Earth orbit, \qtyrange{20000}{80000}{\kilo\meter} & \qtyrange{0.13}{0.53}{\second} & \qty{0.5}{\hour} to \qty{14}{\hour} & \qtyrange{3.45}{4.14}{\kilo\meter\per\second} & Little outside a GEO slot, which takes \qty{45}{\meter\per\second} a year~\cite{oleson1995_geo_nssk} & Two seasons a year, up to \qty{72}{\minute} a day at GEO~\cite{noaa_goes_eclipse} \\
-\addlinespace
-Earth--Moon L4/L5 & \qty{2.6}{\second} & Half a day to 5 days & \qty{3.94}{\kilo\meter\per\second}, \qty{0.83}{\kilo\meter\per\second} of it on arrival & Little, since the points are stable~\cite{nasa_lagrange_points} & Two seasons a year, up to \qty{2.7}{\hour} in Earth's umbra \\
-\addlinespace
-Sun--Earth L1/L2 & \qty{10}{\second} & 2 to 16 days & \qty{3.17}{\kilo\meter\per\second} to L1~\cite{song2021_sel_launch} & About \qty{1}{\meter\per\second} a year at L1~\cite{roberts2011_l1_ace_soho_wind} & None at L1~\cite{nasa_lagrange_points} \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-Distance does not hide a data center, but it buys warning time (\autoref{tab:data_center_sites}). Reaching a Lagrange point takes \qty{11.0}{\kilo\meter\per\second} against \qty{3.4}{\kilo\meter\per\second} to reach \qty{650}{\kilo\meter}~\cite{katz2026aim}. Even at \qty{14}{\kilo\meter\per\second}, an interceptor needs half a day to reach Earth--Moon L4/L5 and two days to reach Sun--Earth L1. That is time to disperse a cluster or launch a defense, though no nation yet has one in space.
+Distance does not hide a data center, but it buys warning time. Reaching a Lagrange point takes \qty{11.0}{\kilo\meter\per\second} against \qty{3.4}{\kilo\meter\per\second} to reach \qty{650}{\kilo\meter}~\cite{katz2026aim}. Even at \qty{14}{\kilo\meter\per\second}, an interceptor needs half a day to reach Earth--Moon L4/L5 and two days to reach Sun--Earth L1. That is time to disperse a cluster or launch a defense, though no nation yet has one in space.
 
 Latency decides which workloads go where. High Earth orbit at \qtyrange{20000}{80000}{\kilo\meter} adds \qtyrange{0.13}{0.53}{\second} of round-trip delay and still gives \qty{0.5}{\hour} to \qty{14}{\hour} of warning, so it suits latency-sensitive inference. Everything else can go to the Lagrange points. Their \qtyrange{2.6}{10}{\second} round trip is far inside the \qty{24}{\hour} turnaround that batch inference services already offer~\cite{anthropic_message_batches,openai_batch_api}. Sun--Earth L1 has no eclipses~\cite{nasa_lagrange_points}. The cost is exposure to solar particle events outside the magnetosphere~\cite{li2019vanallen}. Suncatcher's proton test ran a commercial tensor processing unit to 15~krad(Si) without hard failures~\cite{aguera2026_suncatcher}.
 
