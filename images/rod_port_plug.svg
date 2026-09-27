@@ -54,12 +54,12 @@
       <path d="M 798.4,197.5 C 840,191 882,162 922,136" class="wall"/>
       <path d="M 798.4,242.5 C 840,249 882,278 922,304" class="wall"/>
     </g>
-    <!-- Ship's forward face with the movable insert around the port and a standoff foil. -->
+    <!-- Ship's forward face with the port lip and a standoff foil. -->
     <g id="shipface">
       <rect x="464" y="40" width="10" height="164" fill="#7F8C96"/>
       <rect x="464" y="236" width="10" height="164" fill="#7F8C96"/>
-      <rect x="459" y="204" width="21" height="11.5" fill="#C9A227" stroke="#8A6D12" stroke-width="1"/>
-      <rect x="459" y="224.5" width="21" height="11.5" fill="#C9A227" stroke="#8A6D12" stroke-width="1"/>
+      <rect x="459" y="204" width="21" height="11.5" fill="#7F8C96"/>
+      <rect x="459" y="224.5" width="21" height="11.5" fill="#7F8C96"/>
       <line x1="446" y1="40" x2="446" y2="200" stroke="#999" stroke-width="1.5" stroke-dasharray="5 4"/>
       <line x1="446" y1="240" x2="446" y2="400" stroke="#999" stroke-width="1.5" stroke-dasharray="5 4"/>
     </g>
@@ -104,7 +104,7 @@
 
   <g inkscape:groupmode="layer" id="layer-a-labels" inkscape:label="(a) Labels">
     <text x="20" y="72" class="small">electronics package, one of three</text>
-    <text x="20" y="90" class="small">(GNSS, resistojets, solar cells)</text>
+    <text x="20" y="90" class="small">(resistojets, solar cells)</text>
     <line x1="268" y1="80" x2="339" y2="80" class="leader"/>
     <text x="20" y="136" class="small">Kevlar lines to nose and tail</text>
     <text x="20" y="154" class="small">hold the rod's angle; 8 m long,</text>
@@ -116,9 +116,6 @@
     <text x="458" y="28" class="small" text-anchor="end">ship's forward face,</text>
     <text x="458" y="46" class="small" text-anchor="end">standoff foil dashed</text>
     <line x1="462" y1="40" x2="468" y2="56" class="leader"/>
-    <text x="440" y="392" class="small" text-anchor="end">movable insert carries</text>
-    <text x="440" y="410" class="small" text-anchor="end">the port to the intercept</text>
-    <line x1="442" y1="384" x2="466" y2="238" class="leader"/>
     <text x="508" y="400" class="small">porous frozen methane plug, 2.35 m deep</text>
     <line x1="560" y1="386" x2="555" y2="228" class="leader"/>
     <text x="812" y="334" class="small">exhaust throat,</text>
@@ -129,14 +126,12 @@
 
   <g inkscape:groupmode="layer" id="layer-a-inset" inkscape:label="(a) Port inset, end-on">
     <rect x="800" y="12" width="194" height="114" fill="#ffffff" stroke="#999" stroke-width="1"/>
-    <circle cx="845" cy="69" r="40" fill="#E3F0FA" stroke="#C9A227" stroke-width="3"/>
+    <circle cx="845" cy="69" r="40" fill="#E3F0FA" stroke="#7F8C96" stroke-width="3"/>
     <circle cx="845" cy="69" r="29.3" fill="#B8C2CA" stroke="#4A90B8" stroke-width="1.4"/>
     <line x1="874.3" y1="69" x2="885" y2="69" stroke="#C62828" stroke-width="1.6"/>
     <text x="892" y="34" class="tiny">port 15 cm</text>
     <text x="892" y="52" class="tiny">rod 11 cm</text>
     <text x="892" y="74" class="tiny" fill="#C62828">2 cm clear</text>
-    <text x="892" y="96" class="tiny">located to</text>
-    <text x="892" y="114" class="tiny">2 mm at lock</text>
   </g>
 
   <line x1="20" y1="432" x2="980" y2="432" stroke="#DDD" stroke-width="1"/>
