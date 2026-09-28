@@ -44,7 +44,9 @@ sprawling exploration and its 488 entries already source most of what this repos
 This repository is a tight summary of the data-center case, so a source it needs is almost always
 a source the parent has. Two entries for one fact make a reader stop and check whether the two
 documents claim the same thing. The AI use disclosure is the exception, since it reports which
-tools were used on this document and that is a local fact.
+tools were used on this document and that is a local fact. Placement notes are the other
+exception (amended 2026-09-28). A `note` clause saying where the parent cites the entry
+describes the parent, not the source, so it may be dropped or rewritten here.
 _Avoid_: searching the parent by a guessed key, since its keys are descriptive rather than
 name-and-year (`nasa_odqn2007_fengyun`, `kan2007_asat`) and a near miss silently duplicates;
 keeping a corrected local variant of a parent entry instead of correcting the parent and copying

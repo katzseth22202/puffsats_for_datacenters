@@ -2,7 +2,8 @@
 
 Before adding or changing citations or bibliography entries, read the rule
 **Citations come from the parent bibliography** in [CLAUDE.md](CLAUDE.md),
-including its search procedure, unchanged-copy requirement, and AI disclosure exception.
+including its search procedure, unchanged-copy requirement, placement-note exception, and AI
+disclosure exception.
 
 # Commit attribution
 

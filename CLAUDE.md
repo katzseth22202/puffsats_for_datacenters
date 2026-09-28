@@ -64,6 +64,12 @@ miss an entry that exists and then quietly duplicate it. Write a new entry only 
 search comes back empty. If the parent's entry is thin or wrong, correct it in the parent and
 copy the corrected version down, rather than keeping a better local variant.
 
+One kind of local edit is allowed. A `note` clause that only places the entry within the parent
+paper, such as "Cited in \autoref{sec:heat_shield_bill}", may be removed or rewritten here, since
+it describes the parent rather than the source and its `\autoref` breaks in this document. Anything
+that changes what the entry says the source contains (a figure, a finding, a page, a date) still
+goes through the parent.
+
 The reason is that this document adds no information the parent lacks. The same fact cited
 through two different entries makes a reader stop and check whether the two documents are
 claiming the same thing, which is the opposite of what a tight summary is for.
