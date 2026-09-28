@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Rod, port and plug: one example configuration of the head-on light-gas chamber.
+<!-- Rod, sliding door and plug: one example configuration of the head-on chamber
+     for the 2.5 kg rod.
      (a) A solid metallized polyethylene rod on three tethered electronics packages
-     threads the 15 cm port and meets a porous frozen-methane plug. (b) After impact,
-     sketched: rod and plug turn to plasma and the front sweeps the light gas toward
-     the wider exhaust throat. Chamber, port, plug, throat and rod share one scale
-     (60 px per meter); tether lines and packages do not.
+     flies at the 10.9 cm port. The port is cut in a sliding door (the insert) that
+     carries the skinned polyethylene-foam plug and trims onto the tracked intercept.
+     (b) After impact, sketched: rod and plug turn to plasma and the front sweeps the
+     charge toward the exhaust throat. Chamber, port, plug, throat and rod share one
+     scale (60 px per meter). The door, the tether lines and the packages do not, and
+     the insets are enlarged.
      Each element sits in a named Inkscape layer.
      Export for the paper with:
        inkscape images/rod_port_plug.svg -o images/rod_port_plug.pdf -->
@@ -23,9 +26,11 @@
       .kevlar { stroke: #555; stroke-width: 1.3; fill: none; }
       .wall { stroke: #5E6A73; stroke-width: 5; fill: none; }
       .flow { stroke: #1F5F8B; stroke-width: 2.2; fill: none; }
+      .door { fill: #C9A227; stroke: #7A6112; stroke-width: 1.2; }
+      .backing { fill: #7F8C96; }
     </style>
-    <pattern id="porous" width="6" height="6" patternUnits="userSpaceOnUse">
-      <rect width="6" height="6" fill="#B9A3DC"/>
+    <pattern id="foam" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#F2E6C9"/>
       <circle cx="1.8" cy="1.8" r="1.1" fill="#ffffff"/>
       <circle cx="4.7" cy="4.6" r="0.8" fill="#ffffff"/>
     </pattern>
@@ -42,26 +47,30 @@
     <marker id="arrowRed" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
       <path d="M 0,2 L 14,7 L 0,12 Z" fill="#C62828"/>
     </marker>
+    <marker id="arrowDoor" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0,1 L 12,6 L 0,11 Z" fill="#7A6112"/>
+    </marker>
     <marker id="arrowFlow" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
       <path d="M 0,1 L 12,7 L 0,13" fill="none" stroke="#1F5F8B" stroke-width="2.2"/>
     </marker>
-    <!-- Chamber with a 15 cm entrance on the left and a 0.75 m throat on the right.
-         Circle center (640,220), r = 160 px = 2.67 m. -->
+    <!-- 20 m^3 chamber: circle center (640,220), r = 100 px = 1.68 m.
+         Entrance gap +/-3.3 px (10.9 cm port). Throat gap +/-14 px (0.47 m). -->
     <g id="chamber">
-      <circle cx="640" cy="220" r="158" fill="#E3F0FA"/>
-      <path d="M 798.4,197.5 A 160 160 0 0 0 480.06,215.5" class="wall"/>
-      <path d="M 480.06,224.5 A 160 160 0 0 0 798.4,242.5" class="wall"/>
-      <path d="M 798.4,197.5 C 840,191 882,162 922,136" class="wall"/>
-      <path d="M 798.4,242.5 C 840,249 882,278 922,304" class="wall"/>
+      <circle cx="640" cy="220" r="98" fill="#E3F0FA"/>
+      <path d="M 739,206 A 100 100 0 0 0 540.05,216.7" class="wall"/>
+      <path d="M 540.05,223.3 A 100 100 0 0 0 739,234" class="wall"/>
+      <path d="M 739,206 C 775,200 815,176 850,150" class="wall"/>
+      <path d="M 739,234 C 775,240 815,264 850,290" class="wall"/>
     </g>
-    <!-- Ship's forward face with the port lip and a standoff foil. -->
+    <!-- Ship's forward face: a backing with a slot, and the sliding door (drawn
+         enlarged) that carries the port. Standoff foil dashed. -->
     <g id="shipface">
-      <rect x="464" y="40" width="10" height="164" fill="#7F8C96"/>
-      <rect x="464" y="236" width="10" height="164" fill="#7F8C96"/>
-      <rect x="459" y="204" width="21" height="11.5" fill="#7F8C96"/>
-      <rect x="459" y="224.5" width="21" height="11.5" fill="#7F8C96"/>
-      <line x1="446" y1="40" x2="446" y2="200" stroke="#999" stroke-width="1.5" stroke-dasharray="5 4"/>
-      <line x1="446" y1="240" x2="446" y2="400" stroke="#999" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <rect x="520" y="40" width="10" height="168" class="backing"/>
+      <rect x="520" y="232" width="10" height="168" class="backing"/>
+      <rect x="512" y="200" width="22" height="16.7" class="door"/>
+      <rect x="512" y="223.3" width="22" height="16.7" class="door"/>
+      <line x1="500" y1="40" x2="500" y2="196" stroke="#999" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <line x1="500" y1="244" x2="500" y2="400" stroke="#999" stroke-width="1.5" stroke-dasharray="5 4"/>
     </g>
   </defs>
   <rect id="background" width="1000" height="880" fill="#ffffff"/>
@@ -71,107 +80,126 @@
     <text x="20" y="28" class="title">(a) Arrival</text>
   </g>
 
-  <g inkscape:groupmode="layer" id="layer-a-chamber" inkscape:label="(a) Chamber, ship face and plug">
+  <g inkscape:groupmode="layer" id="layer-a-chamber" inkscape:label="(a) Chamber, ship face, door and plug">
     <use href="#chamber"/>
     <use href="#shipface"/>
-    <rect x="482" y="213.4" width="141" height="13.2" fill="url(#porous)" stroke="#7E5FA8" stroke-width="1"/>
-    <text x="562" y="140" class="small">light gas fill</text>
+    <!-- plug: 0.98 m deep (59 px), 10.9 cm wide, solid skin around foam -->
+    <rect x="534" y="216.7" width="59" height="6.6" fill="url(#foam)" stroke="#8A6D1E" stroke-width="1.6"/>
+    <!-- door travel -->
+    <line x1="509" y1="196" x2="509" y2="176" stroke="#7A6112" stroke-width="2" marker-end="url(#arrowDoor)"/>
+    <line x1="509" y1="244" x2="509" y2="264" stroke="#7A6112" stroke-width="2" marker-end="url(#arrowDoor)"/>
+    <text x="610" y="160" class="small">methane charge</text>
   </g>
 
   <g inkscape:groupmode="layer" id="layer-a-rod" inkscape:label="(a) Rod, tethers and packages">
-    <!-- lines to nose (396,220) and tail (330,220) -->
+    <!-- rod 0.69 m by 6.9 cm: nose (471,220), tail (430,220) -->
     <g opacity="0.45">
-      <line x1="371" y1="286" x2="330" y2="220" class="kevlar"/>
-      <line x1="371" y1="286" x2="396" y2="220" class="kevlar"/>
-      <rect x="363" y="281" width="16" height="11" fill="#2F3B45"/>
+      <line x1="452" y1="286" x2="430" y2="220" class="kevlar"/>
+      <line x1="452" y1="286" x2="471" y2="220" class="kevlar"/>
+      <rect x="444" y="281" width="16" height="11" fill="#2F3B45"/>
     </g>
-    <line x1="363" y1="86" x2="330" y2="220" class="kevlar"/>
-    <line x1="363" y1="86" x2="396" y2="220" class="kevlar"/>
-    <line x1="363" y1="290" x2="330" y2="220" class="kevlar"/>
-    <line x1="363" y1="290" x2="396" y2="220" class="kevlar"/>
-    <line x1="343" y1="80" x2="355" y2="80" stroke="#3B6EA5" stroke-width="4"/>
-    <line x1="371" y1="80" x2="383" y2="80" stroke="#3B6EA5" stroke-width="4"/>
-    <rect x="355" y="74" width="16" height="12" fill="#2F3B45"/>
-    <line x1="343" y1="290" x2="355" y2="290" stroke="#3B6EA5" stroke-width="4"/>
-    <line x1="371" y1="290" x2="383" y2="290" stroke="#3B6EA5" stroke-width="4"/>
-    <rect x="355" y="284" width="16" height="12" fill="#2F3B45"/>
-    <rect x="330" y="216.7" width="66" height="6.6" rx="1.5" fill="#B8C2CA" stroke="#4A90B8" stroke-width="1.4"/>
-    <path d="M 318,204 A 5 16 0 1 0 323,236" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDark)"/>
-    <line x1="232" y1="220" x2="306" y2="220" stroke="#333" stroke-width="2.5" marker-end="url(#arrowBig)"/>
-    <text x="215" y="206" class="small">66–75 km/s</text>
-    <text x="238" y="256" class="small">spin 23°/s</text>
+    <line x1="444" y1="86" x2="430" y2="220" class="kevlar"/>
+    <line x1="444" y1="86" x2="471" y2="220" class="kevlar"/>
+    <line x1="444" y1="290" x2="430" y2="220" class="kevlar"/>
+    <line x1="444" y1="290" x2="471" y2="220" class="kevlar"/>
+    <line x1="424" y1="80" x2="436" y2="80" stroke="#3B6EA5" stroke-width="4"/>
+    <line x1="452" y1="80" x2="464" y2="80" stroke="#3B6EA5" stroke-width="4"/>
+    <rect x="436" y="74" width="16" height="12" fill="#2F3B45"/>
+    <line x1="424" y1="290" x2="436" y2="290" stroke="#3B6EA5" stroke-width="4"/>
+    <line x1="452" y1="290" x2="464" y2="290" stroke="#3B6EA5" stroke-width="4"/>
+    <rect x="436" y="284" width="16" height="12" fill="#2F3B45"/>
+    <rect x="430" y="217.95" width="41" height="4.1" rx="1" fill="#B8C2CA" stroke="#4A90B8" stroke-width="1.2"/>
+    <path d="M 418,204 A 5 16 0 1 0 423,236" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDark)"/>
+    <line x1="322" y1="220" x2="404" y2="220" stroke="#333" stroke-width="2.5" marker-end="url(#arrowBig)"/>
+    <text x="300" y="206" class="small">66–75 km/s</text>
+    <text x="322" y="256" class="small">spin 29°/s</text>
   </g>
 
   <g inkscape:groupmode="layer" id="layer-a-labels" inkscape:label="(a) Labels">
     <text x="20" y="72" class="small">electronics package, one of three</text>
     <text x="20" y="90" class="small">(resistojets, solar cells)</text>
-    <line x1="268" y1="80" x2="339" y2="80" class="leader"/>
+    <line x1="268" y1="80" x2="420" y2="80" class="leader"/>
     <text x="20" y="136" class="small">Kevlar lines to nose and tail</text>
     <text x="20" y="154" class="small">hold the rod's angle; 8 m long,</text>
     <text x="20" y="172" class="small">not to scale</text>
-    <line x1="252" y1="150" x2="346" y2="150" class="leader"/>
-    <text x="20" y="336" class="small">solid polyethylene rod, 1.10 m by 11 cm,</text>
-    <text x="20" y="354" class="small">metal under a clear coat, no electronics</text>
-    <line x1="300" y1="322" x2="338" y2="226" class="leader"/>
-    <text x="458" y="28" class="small" text-anchor="end">ship's forward face,</text>
-    <text x="458" y="46" class="small" text-anchor="end">standoff foil dashed</text>
-    <line x1="462" y1="40" x2="468" y2="56" class="leader"/>
-    <text x="508" y="400" class="small">porous frozen methane plug, 2.35 m deep</text>
-    <line x1="560" y1="386" x2="555" y2="228" class="leader"/>
-    <text x="812" y="334" class="small">exhaust throat,</text>
-    <text x="812" y="352" class="small">0.69–0.80 m across,</text>
-    <text x="812" y="370" class="small">21–28× entrance area</text>
-    <line x1="850" y1="320" x2="852" y2="262" class="leader"/>
+    <line x1="252" y1="150" x2="437" y2="150" class="leader"/>
+    <text x="20" y="336" class="small">solid polyethylene rod, 2.5 kg,</text>
+    <text x="20" y="354" class="small">0.69 m by 6.9 cm, metal under a</text>
+    <text x="20" y="372" class="small">clear coat, no electronics</text>
+    <line x1="270" y1="330" x2="440" y2="225" class="leader"/>
+    <text x="494" y="28" class="small" text-anchor="end">ship's forward face,</text>
+    <text x="494" y="46" class="small" text-anchor="end">standoff foil dashed</text>
+    <line x1="498" y1="40" x2="522" y2="56" class="leader"/>
+    <text x="556" y="50" class="small">sliding door carries the</text>
+    <text x="556" y="68" class="small">port and plug, trims to the</text>
+    <text x="556" y="86" class="small">tracked intercept, then locks</text>
+    <text x="556" y="104" class="small">(door drawn enlarged)</text>
+    <line x1="590" y1="110" x2="534" y2="202" class="leader"/>
+    <text x="480" y="400" class="small">polyethylene foam plug in a solid skin,</text>
+    <text x="480" y="418" class="small">0.98 m deep, 10.9 cm wide, 4.4 kg</text>
+    <line x1="560" y1="386" x2="570" y2="226" class="leader"/>
+    <text x="790" y="334" class="small">exhaust throat,</text>
+    <text x="790" y="352" class="small">0.44–0.50 m across,</text>
+    <text x="790" y="370" class="small">16–21× entrance area</text>
+    <line x1="830" y1="320" x2="790" y2="262" class="leader"/>
   </g>
 
-  <g inkscape:groupmode="layer" id="layer-a-inset" inkscape:label="(a) Port inset, end-on">
-    <rect x="800" y="12" width="194" height="114" fill="#ffffff" stroke="#999" stroke-width="1"/>
-    <circle cx="845" cy="69" r="40" fill="#E3F0FA" stroke="#7F8C96" stroke-width="3"/>
-    <circle cx="845" cy="69" r="29.3" fill="#B8C2CA" stroke="#4A90B8" stroke-width="1.4"/>
-    <line x1="874.3" y1="69" x2="885" y2="69" stroke="#C62828" stroke-width="1.6"/>
-    <text x="892" y="34" class="tiny">port 15 cm</text>
-    <text x="892" y="52" class="tiny">rod 11 cm</text>
-    <text x="892" y="74" class="tiny" fill="#C62828">2 cm clear</text>
+  <g inkscape:groupmode="layer" id="layer-a-inset" inkscape:label="(a) Door inset, end-on">
+    <rect x="786" y="8" width="208" height="128" fill="#ffffff" stroke="#999" stroke-width="1"/>
+    <!-- backing slot, door plate, port and rod, enlarged: port r = 30 px -->
+    <rect x="800" y="22" width="92" height="100" class="backing"/>
+    <rect x="818" y="30" width="56" height="84" fill="#5E6A73"/>
+    <rect x="824" y="44" width="44" height="56" class="door"/>
+    <circle cx="846" cy="72" r="20" fill="#E3F0FA" stroke="#7A6112" stroke-width="1.5"/>
+    <circle cx="846" cy="72" r="12.7" fill="#B8C2CA" stroke="#4A90B8" stroke-width="1.2"/>
+    <line x1="858.7" y1="72" x2="866" y2="72" stroke="#C62828" stroke-width="1.6"/>
+    <line x1="846" y1="44" x2="846" y2="32" stroke="#7A6112" stroke-width="1.8" marker-end="url(#arrowDoor)"/>
+    <line x1="846" y1="100" x2="846" y2="112" stroke="#7A6112" stroke-width="1.8" marker-end="url(#arrowDoor)"/>
+    <text x="898" y="32" class="tiny">door slides</text>
+    <text x="898" y="50" class="tiny">in two axes</text>
+    <text x="898" y="74" class="tiny">port 10.9 cm</text>
+    <text x="898" y="92" class="tiny">rod 6.9 cm</text>
+    <text x="898" y="112" class="tiny" fill="#C62828">2 cm clear</text>
   </g>
 
-  <line x1="20" y1="432" x2="980" y2="432" stroke="#DDD" stroke-width="1"/>
+  <line x1="20" y1="440" x2="980" y2="440" stroke="#DDD" stroke-width="1"/>
 
   <!-- ======================== (b) After impact ======================== -->
   <g inkscape:groupmode="layer" id="layer-b-title" inkscape:label="(b) Title">
-    <text x="20" y="468" class="title">(b) After impact (sketch)</text>
+    <text x="20" y="476" class="title">(b) After impact (sketch)</text>
   </g>
 
   <g transform="translate(0,440)">
     <g inkscape:groupmode="layer" id="layer-b-chamber" inkscape:label="(b) Chamber and plasma front">
       <use href="#chamber"/>
       <use href="#shipface"/>
-      <path d="M 482,216 L 700,118 Q 742,220 700,322 L 482,224 Z" fill="url(#plasma)" opacity="0.9"/>
-      <path d="M 704,110 Q 752,220 704,330" fill="none" stroke="#1F5F8B" stroke-width="7" opacity="0.6"/>
-      <line x1="755" y1="160" x2="790" y2="200" class="flow" marker-end="url(#arrowFlow)"/>
-      <line x1="755" y1="280" x2="790" y2="240" class="flow" marker-end="url(#arrowFlow)"/>
-      <line x1="770" y1="220" x2="800" y2="220" class="flow" marker-end="url(#arrowFlow)"/>
-      <line x1="880" y1="190" x2="960" y2="170" class="flow" marker-end="url(#arrowFlow)"/>
-      <line x1="890" y1="220" x2="975" y2="220" class="flow" marker-end="url(#arrowFlow)"/>
-      <line x1="880" y1="250" x2="960" y2="270" class="flow" marker-end="url(#arrowFlow)"/>
-      <line x1="458" y1="220" x2="410" y2="220" stroke="#C62828" stroke-width="2" marker-end="url(#arrowRed)"/>
+      <path d="M 536,217 L 670,150 Q 700,220 670,290 L 536,223 Z" fill="url(#plasma)" opacity="0.9"/>
+      <path d="M 674,142 Q 708,220 674,298" fill="none" stroke="#1F5F8B" stroke-width="7" opacity="0.6"/>
+      <line x1="705" y1="180" x2="728" y2="206" class="flow" marker-end="url(#arrowFlow)"/>
+      <line x1="705" y1="260" x2="728" y2="234" class="flow" marker-end="url(#arrowFlow)"/>
+      <line x1="715" y1="220" x2="740" y2="220" class="flow" marker-end="url(#arrowFlow)"/>
+      <line x1="820" y1="190" x2="900" y2="170" class="flow" marker-end="url(#arrowFlow)"/>
+      <line x1="830" y1="220" x2="915" y2="220" class="flow" marker-end="url(#arrowFlow)"/>
+      <line x1="820" y1="250" x2="900" y2="270" class="flow" marker-end="url(#arrowFlow)"/>
+      <line x1="508" y1="220" x2="460" y2="220" stroke="#C62828" stroke-width="2" marker-end="url(#arrowRed)"/>
       <!-- tether lines vaporizing on the standoff foil -->
-      <circle cx="446" cy="110" r="6" fill="#F4A259" opacity="0.8"/>
-      <circle cx="446" cy="330" r="6" fill="#F4A259" opacity="0.8"/>
+      <circle cx="500" cy="110" r="6" fill="#F4A259" opacity="0.8"/>
+      <circle cx="500" cy="330" r="6" fill="#F4A259" opacity="0.8"/>
     </g>
 
     <g inkscape:groupmode="layer" id="layer-b-labels" inkscape:label="(b) Labels">
-      <text x="520" y="44" class="small">front spreads as it sweeps the gas</text>
-      <line x1="700" y1="50" x2="718" y2="118" class="leader"/>
+      <text x="560" y="72" class="small">front spreads as it sweeps the charge;</text>
+      <text x="560" y="90" class="small">pressure clamps the door to its backing</text>
+      <line x1="650" y1="96" x2="672" y2="150" class="leader"/>
       <text x="20" y="100" class="small">tether lines strike the standoff foil;</text>
       <text x="20" y="118" class="small">packages pass outside the ship</text>
-      <line x1="282" y1="110" x2="438" y2="110" class="leader"/>
-      <text x="400" y="186" class="small" text-anchor="end">a small share leaks back</text>
-      <text x="400" y="204" class="small" text-anchor="end">out the 15 cm entrance</text>
-      <text x="508" y="400" class="small">rod and plug turn to plasma together</text>
-      <line x1="560" y1="386" x2="530" y2="232" class="leader"/>
-      <text x="812" y="334" class="small">most gas leaves</text>
-      <text x="812" y="352" class="small">through the wide</text>
-      <text x="812" y="370" class="small">throat</text>
+      <line x1="282" y1="110" x2="492" y2="110" class="leader"/>
+      <text x="450" y="186" class="small" text-anchor="end">a small share leaks back</text>
+      <text x="450" y="204" class="small" text-anchor="end">out the 10.9 cm port</text>
+      <text x="480" y="400" class="small">rod and plug turn to plasma together</text>
+      <line x1="560" y1="386" x2="560" y2="232" class="leader"/>
+      <text x="790" y="334" class="small">most gas leaves</text>
+      <text x="790" y="352" class="small">through the throat</text>
     </g>
   </g>
 </svg>
