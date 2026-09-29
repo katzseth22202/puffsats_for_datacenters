@@ -150,7 +150,12 @@ direct heating, ASI-funded 1999-2002, synthesis published in Acta Astronautica a
 is the case in point for the high-temperature exhaust question, alongside the still-active
 gas-core and nuclear-lightbulb lineage, whose transpiration-cooled throat is the established
 ancestor of spraying gas to keep hot flow off a wall.
-_Avoid_: asking a cancelled programme "why did it stop" when the record says politics (ask
+Project 242 is an outreach target only, not a basis for the design (amended 2026-09-29). The
+companion proposal no longer cites it as the precedent. Its hydrogen runs at a few bar in
+steady flow, and it does not show that a wall survives the pulsed chambers' 500-820 bar. The
+design now rests on the parent's two pairings, hydrogen at 5500 K on copper and methane at
+7000 K on pitch-lined steel.
+_Avoid_: citing Project 242 as evidence that the chamber can reach 10000 K; asking a cancelled programme "why did it stop" when the record says politics (ask
 instead whether the physics was closing); borrowing the nuclear heating mechanism along with
 the nozzle problem, when only the latter transfers.
 
