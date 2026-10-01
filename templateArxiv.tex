@@ -224,7 +224,7 @@ The faster route costs a larger departure burn, a median \SI{1.04}{\kilo\meter\p
 A pusher plate works as Project Orion's did. Gas strikes a plate at the back of the vehicle and pushes it forward~\cite{projorion}. The plate pushes only the way the gas travels, so it suits the overtake, where PuffSats catch the vehicle from behind and their momentum already points forward. Met head-on, a plate would reverse that momentum and brake the vehicle. That is why the departure burn uses the nozzles of \autoref{sec:rocket_nozzles}~\cite{katz2026aim}.
 
 \subsection{Spraying Water Into The Pulse}\label{sec:plate_water_spray}
-Our plate differs from Orion's in the way that sets its performance. The vehicle sprays its own water into the arriving PuffSat gas ahead of the plate (\autoref{fig:plate_stack})~\cite{Katz_water_injected_plate_2026,katz2026aim}. Write $k$ for the slug ratio, the kilograms of carried water per kilogram of arriving PuffSat, and $w$ for the closing speed. A PuffSat of mass $m$ that bounced perfectly off a bare plate would deliver an impulse of $2mw$. With the water added, the mixture's center of mass approaches the plate at only $w/(1+k)$, but the collision has heated it. The hot gas expands off the plate as well as bouncing, and the two motions add as energies rather than as speeds. If all the incoming kinetic energy leaves as backward exhaust at one speed, that speed is $w/\sqrt{1+k}$ and the impulse is~\cite{katz2026aim}
+Our plate differs from Orion's in the way that sets its performance. The vehicle sprays its own water into the arriving PuffSat gas ahead of the plate (\autoref{fig:plate_stack})~\cite{Katz_water_injected_plate_2026,katz2026aim}. Call the carried water the \textbf{slug}, and write $k$ for the slug ratio, the kilograms of slug per kilogram of arriving PuffSat, and $w$ for the closing speed. A PuffSat of mass $m$ that bounced perfectly off a bare plate would deliver an impulse of $2mw$. With the water added, the mixture's center of mass approaches the plate at only $w/(1+k)$, but the collision has heated it. The hot gas expands off the plate as well as bouncing, and the two motions add as energies rather than as speeds. If all the incoming kinetic energy leaves as backward exhaust at one speed, that speed is $w/\sqrt{1+k}$ and the impulse is~\cite{katz2026aim}
 \begin{equation}
     J_{\max} = mw\left(1+\sqrt{1+k}\right).
     \label{eq:plate_ceiling}
@@ -455,7 +455,7 @@ Lost efficiency costs the head-on chamber more than it costs the plate. The cham
     \caption{Doubling time in years behind the solved chambers, by the slug the plate sprays and what the PuffSats are made of, capped at $k = 10$ and uncapped~\cite{katz2026aim,Katz_aim_is_all_you_need_2025}. Settings otherwise as in \autoref{tab:growth_ledger_doubling}.}
     \label{tab:growth_ledger_slug}
     \begin{tabular}{|r|l|r|r|r|}\hline
-        \textbf{Plate} & \textbf{Departure} & \textbf{Water on ice} & \textbf{Argon on ice} & \textbf{All argon} \\\hline
+        \textbf{Plate} & \textbf{Departure} & \textbf{Water slug, ice PuffSats} & \textbf{Argon slug, ice PuffSats} & \textbf{Argon slug, argon PuffSats} \\\hline
         0.5 & Hydrogen & 1.88 / 1.88 & 1.73 / 1.68 & 1.71 / 1.66 \\\hline
         0.5 & Methane & 2.11 / 2.10 & 1.91 / 1.83 & 1.89 / 1.81 \\\hline
         0.7 & Hydrogen & 1.68 / 1.68 & 1.54 / 1.47 & 1.52 / 1.45 \\\hline
