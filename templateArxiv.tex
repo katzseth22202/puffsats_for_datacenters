@@ -393,7 +393,7 @@ Each cycle runs in five steps~\cite{katz2026aim}.
     \item Each wave pays its own course correction in methalox. The growth wave pays its early-arrival burn, a mean of \SI{464}{\meter\per\second} at the 20-day split. The departure wave pays the chain's deep-space maneuver (\autoref{sec:two_synodic_cadence}).
 \end{enumerate}
 
-The departure hardware is charged and then \textbf{expended}. The chamber wall (\SI{32}{\tonne} for hydrogen and \SI{19}{\tonne} for methane, \autoref{sec:rocket_nozzles}), a \SI{2.19}{\tonne} nozzle extension scaled up from the RL10B-2's carbon--carbon one, the tanks and any Raptor engines leave with the stack, and each launch unit brings a fresh set~\cite{katz2026aim}. Expending is the pessimistic case for mass. Retrieving the chamber would free 4 to 7\% of the departing stack at the price of the PuffSats that brake it, so it is an upside the ledger does not take. The ledger does not price money. A new chamber is built for every cycle, and its cost is not counted.
+The departure hardware is charged and then \textbf{expended}. The chamber wall (\SI{32}{\tonne} for hydrogen and \SI{19}{\tonne} for methane, \autoref{sec:rocket_nozzles}), a \SI{2.19}{\tonne} nozzle extension scaled up from the RL10B-2's carbon--carbon one, the tanks and any Raptor engines leave with the stack, and each launch unit brings a fresh set~\cite{katz2026aim}. Expending is the pessimistic case for mass. Retrieving the chamber would free 4 to 7\% of the departing stack at the price of the PuffSats that brake it, so it is an upside the ledger does not take. The ledger counts mass, not money. \autoref{sec:launch_cost_speculation} prices the chamber built for every cycle.
 
 Efficiencies are quoted net of chemistry, and the two devices need different yardsticks. The plate's 0.5, 0.7 and 1.0 are the share of the pulse's energy left after the plume spreads and spills past the rim. The chemical toll of \autoref{sec:plate_water_spray}, the energy held in broken bonds, is charged separately, pulse by pulse. A chamber is quoted against its \textbf{chemistry ceiling}, the most of the pulse any chamber of that gas could turn into directed exhaust. It is one minus the energy held in bonds at peak that the nozzle never returns. At the design area ratio of 300, methane holds 69\% of the pulse in bonds and gets back only 52\% of that, because its carbon never re-bonds in the nozzle. Its ceiling is $1 - 0.69 \times 0.48 = 0.669$. Hydrogen holds 36\% and gets back 94\%, for $1 - 0.36 \times 0.06 = 0.978$~\cite{Katz_puffsat_impact_sim_2026,katz2026aim}. The simulated chambers of \autoref{sec:rocket_nozzles} reach \num{0.538} and \num{0.858}, which is 80\% and 88\% of their ceilings. Those are modeled, not measured, so every efficiency in the tables below is a requirement.
 
@@ -409,17 +409,17 @@ The incumbent flies the same unit and the same plate. Methalox needs no departur
     \label{tab:growth_ledger_doubling}
     \begin{tabular}{|l|r|r|r|}\hline
         \textbf{Departure} & \textbf{Plate 0.5} & \textbf{Plate 0.7} & \textbf{Plate 1.0} \\\hline
-        Hydrogen, 50\% of ceiling & 4.50 (4.18) & 3.43 (3.13) & 2.72 (2.42) \\\hline
-        Hydrogen, 70\% & 2.16 (2.08) & 1.87 (1.77) & 1.63 (1.51) \\\hline
-        Hydrogen, solved (88\%) & 1.73 (1.68) & 1.54 (1.47) & 1.37 (1.28) \\\hline
-        Hydrogen, 90\% & 1.70 (1.65) & 1.51 (1.45) & 1.35 (1.26) \\\hline
-        Hydrogen, 100\% & 1.58 (1.54) & 1.42 (1.36) & 1.27 (1.20) \\\hline
-        Methane, 50\% of ceiling & 4.28 (3.85) & 3.30 (2.92) & 2.65 (2.28) \\\hline
-        Methane, 70\% & 2.21 (2.10) & 1.91 (1.78) & 1.67 (1.51) \\\hline
-        Methane, solved (80\%) & 1.91 (1.83) & 1.68 (1.58) & 1.49 (1.37) \\\hline
-        Methane, 90\% & 1.75 (1.68) & 1.55 (1.46) & 1.38 (1.27) \\\hline
-        Methane, 100\% & 1.62 (1.56) & 1.45 (1.38) & 1.30 (1.21) \\\hline
-        Methalox, \SI{380}{\second}, three-synodic only & 5.27 (4.97) & 3.91 (3.59) & 3.01 (2.68) \\\hline
+        Hydrogen, 50\% of ceiling & 5.44 (4.98) & 3.94 (3.56) & 3.03 (2.67) \\\hline
+        Hydrogen, 70\% & 2.27 (2.19) & 1.96 (1.85) & 1.69 (1.57) \\\hline
+        Hydrogen, solved (88\%) & 1.79 (1.74) & 1.59 (1.52) & 1.41 (1.32) \\\hline
+        Hydrogen, 90\% & 1.75 (1.71) & 1.56 (1.49) & 1.38 (1.30) \\\hline
+        Hydrogen, 100\% & 1.63 (1.58) & 1.45 (1.40) & 1.30 (1.22) \\\hline
+        Methane, 50\% of ceiling & 4.92 (4.38) & 3.68 (3.22) & 2.89 (2.46) \\\hline
+        Methane, 70\% & 2.33 (2.20) & 2.00 (1.86) & 1.73 (1.57) \\\hline
+        Methane, solved (80\%) & 1.99 (1.90) & 1.74 (1.63) & 1.53 (1.40) \\\hline
+        Methane, 90\% & 1.80 (1.73) & 1.60 (1.51) & 1.42 (1.31) \\\hline
+        Methane, 100\% & 1.67 (1.61) & 1.49 (1.41) & 1.33 (1.23) \\\hline
+        Methalox, \SI{380}{\second}, three-synodic only & 5.57 (5.23) & 4.08 (3.73) & 3.10 (2.75) \\\hline
     \end{tabular}
 \end{table}
 
@@ -430,23 +430,23 @@ The incumbent flies the same unit and the same plate. Methalox needs no departur
     \begin{tabular}{|l|r|r|r|r|r|r|r|}\hline
         & \multicolumn{2}{c|}{\textbf{Plate 0.5}} & \multicolumn{3}{c|}{\textbf{Plate 0.7}} & \multicolumn{2}{c|}{\textbf{Plate 1.0}} \\\hline
         \textbf{Departure} & \textbf{Annual} & \textbf{10 yr} & \textbf{Payload (\si{\tonne})} & \textbf{Annual} & \textbf{10 yr} & \textbf{Annual} & \textbf{10 yr} \\\hline
-        Hydrogen, 50\% & 17\% & 4.4 & 152 & 22\% & 7.3 & 29\% & 12.5 \\\hline
-        Hydrogen, 70\% & 38\% & 26.7 & 228 & 45\% & 44.6 & 53\% & 78.4 \\\hline
-        Hydrogen, solved & 49\% & 61.9 & 275 & 57\% & 104 & 66\% & 185 \\\hline
-        Hydrogen, 90\% & 50\% & 67.3 & 280 & 58\% & 113 & 67\% & 202 \\\hline
-        Hydrogen, 100\% & 55\% & 92.7 & 301 & 63\% & 157 & 73\% & 281 \\\hline
-        Methane, 50\% & 18\% & 5.0 & 153 & 23\% & 8.2 & 30\% & 14.0 \\\hline
-        Methane, 70\% & 37\% & 24.9 & 221 & 44\% & 41.2 & 52\% & 71.5 \\\hline
-        Methane, solved & 44\% & 41.7 & 249 & 51\% & 69.5 & 59\% & 121 \\\hline
-        Methane, 90\% & 49\% & 60.4 & 271 & 56\% & 101 & 65\% & 178 \\\hline
-        Methane, 100\% & 53\% & 82.8 & 291 & 61\% & 139 & 70\% & 247 \\\hline
-        Methalox & 14\% & 3.3 & 136 & 19\% & 5.1 & 26\% & 8.6 \\\hline
+        Hydrogen, 50\% & 14\% & 2.5 & 145 & 19\% & 4.0 & 26\% & 6.9 \\\hline
+        Hydrogen, 70\% & 36\% & 17.9 & 220 & 43\% & 29.8 & 51\% & 52.2 \\\hline
+        Hydrogen, solved & 47\% & 44.7 & 267 & 55\% & 75.1 & 64\% & 133 \\\hline
+        Hydrogen, 90\% & 48\% & 49.0 & 273 & 56\% & 82.3 & 65\% & 146 \\\hline
+        Hydrogen, 100\% & 53\% & 69.3 & 293 & 61\% & 117 & 71\% & 208 \\\hline
+        Methane, 50\% & 15\% & 3.1 & 147 & 21\% & 5.0 & 27\% & 8.5 \\\hline
+        Methane, 70\% & 35\% & 17.2 & 215 & 41\% & 28.4 & 49\% & 49.0 \\\hline
+        Methane, solved & 42\% & 29.9 & 242 & 49\% & 49.7 & 57\% & 86.4 \\\hline
+        Methane, 90\% & 47\% & 44.4 & 264 & 54\% & 74.2 & 63\% & 130 \\\hline
+        Methane, 100\% & 52\% & 62.3 & 284 & 59\% & 104 & 68\% & 184 \\\hline
+        Methalox & 13\% & 3.2 & 132 & 19\% & 5.1 & 25\% & 8.6 \\\hline
     \end{tabular}
 \end{table}
 
-Both chambers beat methalox at every efficiency swept, even at half of their ceilings (\autoref{tab:growth_ledger_doubling}). Behind a 0.7 plate, methalox doubles in \SI{3.91}{\year}. Hydrogen at half its ceiling takes \SI{3.43}{\year} and methane \SI{3.30}{\year}, 12 to 16\% faster, and at 70\% both are about twice as fast. The simulated chambers double in \SI{1.54}{\year} for hydrogen and \SI{1.68}{\year} for methane. Over ten years that is 104 and 70 times the mass, against 5 for methalox (\autoref{tab:growth_ledger_ten_year})~\cite{katz2026aim}.
+Both chambers double faster than methalox at every efficiency swept, even at half of their ceilings (\autoref{tab:growth_ledger_doubling}). Behind a 0.7 plate, methalox doubles in \SI{4.08}{\year}. Hydrogen at half its ceiling takes \SI{3.94}{\year} and methane \SI{3.68}{\year}, 3 to 10\% faster, and at 70\% both are about twice as fast. The simulated chambers double in \SI{1.59}{\year} for hydrogen and \SI{1.74}{\year} for methane. Over ten years that is 75 and 50 times the mass, against 5 for methalox (\autoref{tab:growth_ledger_ten_year})~\cite{katz2026aim}. The half-ceiling chambers fall behind methalox over those ten years, at 4.0 and 5.0 times against 5.1. Their first cycle is the three-synodic return that feeds a two-synodic departure, the dearest burn in the chain, and it grows them only 1.22 and 1.31 times against methalox's 1.66.
 
-Methane leads hydrogen by about 4\% at half of its ceiling, and hydrogen leads by 2 to 3\% from 70\% up. Hydrogen's lead comes only from its higher ceiling. At equal absolute efficiency the gas barely matters, because the rod supplies the energy, and hydrogen's heavier tanks and wall then decide against it~\cite{katz2026aim}. That is why the tables sweep a share of the ceiling.
+Methane leads hydrogen by 5 to 10\% at half of its ceiling, and hydrogen leads by 2 to 3\% from 70\% up. Hydrogen's lead comes only from its higher ceiling. At equal absolute efficiency the gas barely matters, because the rod supplies the energy, and hydrogen's heavier tanks and wall then decide against it~\cite{katz2026aim}. That is why the tables sweep a share of the ceiling.
 
 Lost efficiency costs the head-on chamber more than it costs the plate. The chamber is charged in full for the momentum each rod carried in, at any efficiency, while the exhaust momentum falls only as the square root of the efficiency. For hydrogen that charge is 19\% of the gross momentum at full efficiency and 27\% at half. Halving the efficiency leaves hydrogen 0.637 of its specific impulse and methane 0.642. The overtaking plate carries no such charge and keeps 0.779~\cite{katz2026aim}. So the 50\% rows fall far behind the 70\% rows.
 
@@ -456,20 +456,20 @@ Lost efficiency costs the head-on chamber more than it costs the plate. The cham
     \label{tab:growth_ledger_slug}
     \begin{tabular}{|r|l|r|r|r|}\hline
         \textbf{Plate} & \textbf{Departure} & \textbf{Water slug, ice PuffSats} & \textbf{Argon slug, ice PuffSats} & \textbf{Argon slug, argon PuffSats} \\\hline
-        0.5 & Hydrogen & 1.88 / 1.88 & 1.73 / 1.68 & 1.71 / 1.66 \\\hline
-        0.5 & Methane & 2.11 / 2.10 & 1.91 / 1.83 & 1.89 / 1.81 \\\hline
-        0.7 & Hydrogen & 1.68 / 1.68 & 1.54 / 1.47 & 1.52 / 1.45 \\\hline
-        0.7 & Methane & 1.87 / 1.86 & 1.68 / 1.58 & 1.66 / 1.56 \\\hline
-        1.0 & Hydrogen & 1.50 / 1.50 & 1.37 / 1.28 & 1.35 / 1.27 \\\hline
-        1.0 & Methane & 1.65 / 1.65 & 1.49 / 1.37 & 1.47 / 1.35 \\\hline
+        0.5 & Hydrogen & 1.95 / 1.95 & 1.79 / 1.74 & 1.77 / 1.72 \\\hline
+        0.5 & Methane & 2.20 / 2.20 & 1.99 / 1.90 & 1.96 / 1.87 \\\hline
+        0.7 & Hydrogen & 1.74 / 1.74 & 1.59 / 1.52 & 1.57 / 1.50 \\\hline
+        0.7 & Methane & 1.94 / 1.93 & 1.74 / 1.63 & 1.72 / 1.61 \\\hline
+        1.0 & Hydrogen & 1.55 / 1.55 & 1.41 / 1.32 & 1.39 / 1.30 \\\hline
+        1.0 & Methane & 1.71 / 1.71 & 1.53 / 1.40 & 1.52 / 1.39 \\\hline
     \end{tabular}
 \end{table}
 
 Argon beats water on the plate by 8 to 11\% in doubling time (\autoref{tab:growth_ledger_slug}). An argon slug on ice PuffSats gets nearly all of that. Argon PuffSats add only about 1\% more, so the PuffSats need no cryogenic storage or sunshades. Water fights its own toll. At $k = 10$ on the first pulse, only \num{0.844} of its jet's speed survives the broken bonds. It recovers to \numrange{0.91}{0.95} by the last pulse only by lowering $k$, so uncapping the loading gains water nothing~\cite{katz2026aim}. Water's toll is charged as if its bonds never re-form, which is pessimistic, and its role as a heat sponge for the plate is not priced.
 
-The smaller settings move the answer little. Hydrogen's cryostats and boil-off, swept from none to 5\% cryostats and 0.5\% a day, keep the solved hydrogen chamber behind a 0.7 plate between \SI{1.49}{\year} and \SI{1.57}{\year}. That spans the 0.1 to 0.4\% a day reported for minimally insulated tanks in orbit~\cite{eko2026_boiloff_review}. Methane's pitch, from \SIrange{1.4}{5.6}{\kilogram} per pulse, moves its doubling by 0.01 to \SI{0.02}{\year}. A 10-day parking orbit, flown consistently, is 0 to 2\% slower for the chambers and 9\% slower for methalox. Its cheaper early-arrival burn (\SI{179}{\meter\per\second}) does not make up its dearer reversal (\SI{373}{\meter\per\second})~\cite{katz2026aim}.
+The smaller settings move the answer little. Hydrogen's cryostats and boil-off, swept from none to 5\% cryostats and 0.5\% a day, keep the solved hydrogen chamber behind a 0.7 plate between \SI{1.54}{\year} and \SI{1.62}{\year}. That spans the 0.1 to 0.4\% a day reported for minimally insulated tanks in orbit~\cite{eko2026_boiloff_review}. Methane's pitch, from \SIrange{1.4}{5.6}{\kilogram} per pulse, moves solved methane's doubling behind a 0.7 plate by \SI{0.01}{\year}, from 1.74 to \SI{1.73}{\year}. A 10-day parking orbit, flown consistently, is at most 4\% slower for the chambers and 8 to 15\% slower for methalox, 10\% behind a 0.7 plate. Its cheaper early-arrival burn (\SI{179}{\meter\per\second}) does not make up its dearer reversal (\SI{373}{\meter\per\second})~\cite{katz2026aim}.
 
-Several things are still not priced~\cite{katz2026aim}. The chamber is built new for every cycle, and its cost is not counted. Fly-and-park rows (\autoref{sec:fly_and_park_cadence}) need a real-ephemeris fast route for each cycle and are not built. Every burn is centered on periapsis, and an earlier ignition might lose less on the longest burns. The chamber's efficiency is held at its \SI{75}{\kilo\meter\per\second} value across all closing speeds, since the impact simulation solved it only there. The ledger does not reuse the plate, though it could (\autoref{sec:plate_reuse}), and neither the plate nor the cryostats pay a deorbit burn. The plate's area and the pulse size have not been re-sized to these push ratios, which run 8.7 to 14.7 tonnes of departing stack per tonne of growth-wave PuffSat behind the chambers. Hydrogen's boil-off during the burn itself, well under 1\% for tanks several meters across, is not charged.
+Several things are still left out of the ledger~\cite{katz2026aim}. Fly-and-park rows (\autoref{sec:fly_and_park_cadence}) need a real-ephemeris fast route for each cycle and are not built. Every burn is centered on periapsis, and an earlier ignition might lose less on the longest burns. The chamber's efficiency is held at its \SI{75}{\kilo\meter\per\second} value across all closing speeds, since the impact simulation solved it only there. The ledger does not reuse the plate, though it could (\autoref{sec:plate_reuse}), and neither the plate nor the cryostats pay a deorbit burn. The plate's area and the pulse size have not been re-sized to these push ratios, which run 8.7 to 14.7 tonnes of departing stack per tonne of growth-wave PuffSat behind the chambers. Hydrogen's boil-off during the burn itself, well under 1\% for tanks several meters across, is not charged.
 
 \section{Data Centers, Anti-Satellite Weapons, And Launch Costs}\label{sec:data_center_attacks}
 Data centers are now military targets. In March 2026, Iranian drones struck Amazon Web Services data centers in the United Arab Emirates and Bahrain~\cite{cnbc2026_aws_strike,gatech2026_aws_strike}. Project Suncatcher~\cite{aguera2026_suncatcher} and Starcloud~\cite{foust2026_starcloud_fcc} both plan sun-synchronous orbits, Starcloud in shells at \qtyrange{600}{850}{\kilo\meter}. In 2007, China destroyed the Fengyun-1C weather satellite at \qty{865}{\kilo\meter} with a ground-launched missile~\cite{kan2007_asat,nasa_odqn2007_fengyun}, and China and Russia both now field such weapons~\cite{dia2022_space_security}. A sun-synchronous orbit passes over nearly every latitude~\cite{nasa_orbit_catalog}, so attackers get repeated chances and the interceptor arrives within minutes.
