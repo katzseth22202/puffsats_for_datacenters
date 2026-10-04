@@ -68,7 +68,7 @@
     <path d="M 758.0,350.0 L 709.7,414.1" class="leader"/>
     <text x="20.0" y="140.0" text-anchor="start" class="small"><tspan x="20.0" dy="0em">Unpowered Jupiter flyby, perijove at least</tspan><tspan x="20.0" dy="1.2em">4000 km altitude. It bends the payload into</tspan><tspan x="20.0" dy="1.2em">a prograde dive and the faster impactors</tspan><tspan x="20.0" dy="1.2em">into a retrograde one on the mirror ellipse.</tspan></text>
     <path d="M 120.0,212.0 L 134.4,296.9" class="leader"/>
-    <text x="576.4" y="599.7" text-anchor="start" class="small"><tspan x="576.4" dy="0em">4 solar radii node. The streams meet</tspan><tspan x="576.4" dy="1.2em">head-on, closing at 617 km/s.</tspan><tspan x="576.4" dy="1.2em">The payload gains 35.04 km/s.</tspan></text>
+    <text x="576.4" y="599.7" text-anchor="start" class="small"><tspan x="576.4" dy="0em">4 solar radii node. The streams meet</tspan><tspan x="576.4" dy="1.2em">head-on, closing at about 615 km/s.</tspan><tspan x="576.4" dy="1.2em">The payload gains 35.04 km/s.</tspan></text>
     <path d="M 574.4,585.7 L 551.4,480.7" class="leader"/>
     <text x="520.0" y="40.0" text-anchor="start" class="small"><tspan x="520.0" dy="0em">Earth 3.2761 yr later, after three synodic</tspan><tspan x="520.0" dy="1.2em">periods. The payload crosses at 157.82 km/s</tspan><tspan x="520.0" dy="1.2em">and pushes the next cycle's payload.</tspan></text>
     <path d="M 560.0,90.0 L 442.2,252.2" class="leader"/>

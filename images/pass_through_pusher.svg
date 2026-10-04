@@ -57,7 +57,7 @@
 <text x="739" y="242" text-anchor="middle" class="small" style="fill:#455A64"><tspan x="739" dy="0em">clear bore</tspan></text>
 <path d="M 960,250 L 935,241 L 935,259 Z" fill="#455A64"/>
 <line x1="928" y1="250" x2="208" y2="250" stroke="#C62828" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#arrowRed)"/>
-<text x="985" y="402" text-anchor="end" class="small"><tspan x="985" dy="0em">Projectile from ahead,</tspan><tspan x="985" dy="1.2em">1 kg of carbon foam,</tspan><tspan x="985" dy="1.2em">618 km/s closing</tspan></text>
+<text x="985" y="402" text-anchor="end" class="small"><tspan x="985" dy="0em">Projectile from ahead,</tspan><tspan x="985" dy="1.2em">1 kg of carbon foam,</tspan><tspan x="985" dy="1.2em">about 615 km/s closing</tspan></text>
 <path d="M 950,386 L 948,262" class="leader"/>
 <line x1="870" y1="70" x2="960" y2="70" stroke="#333" stroke-width="2.4" marker-end="url(#arrowDark)"/>
 <text x="860" y="76" text-anchor="end" class="small"><tspan x="860" dy="0em">Ship's travel</tspan></text>
