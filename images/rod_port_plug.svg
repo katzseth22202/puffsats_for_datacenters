@@ -134,7 +134,7 @@
     <rect x="430" y="217.95" width="41" height="4.1" rx="1" fill="#B8C2CA" stroke="#4A90B8" stroke-width="1.2"/>
     <path d="M 418,204 A 5 16 0 1 0 423,236" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDark)"/>
     <line x1="322" y1="220" x2="404" y2="220" stroke="#333" stroke-width="2.5" marker-end="url(#arrowBig)"/>
-    <text x="300" y="206" class="small">66–75 km/s</text>
+    <text x="300" y="206" class="small">68–75 km/s</text>
     <text x="322" y="256" class="small">spin 29°/s</text>
   </g>
 
