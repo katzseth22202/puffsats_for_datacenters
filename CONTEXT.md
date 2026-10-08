@@ -28,7 +28,9 @@ The standalone document at the repository root, `templateArxiv.tex`, built in th
 paper's arXiv format and carrying the orbital-data-center demand story at length. Its
 recipients are the people who can judge demand and siting, not propulsion physicists, and it
 is the one place in this repository where the data-center case is argued rather than assumed.
-It does not travel with Brief A or Brief B. Those keep their plain one-page memo attachment.
+It does not travel with a physics brief, which keeps its plain one-page memo attachment. The R10
+cost brief is the exception and is sent with it (amended 2026-10-08, after Briefs A and B were
+retired on 2026-10-06).
 "Near-term" in this document means the programme can start now: nothing blocks a first
 launch today, and the first PuffSats return 2.2 years later. It does not mean data-center mass
 delivered at scale soon, which takes many growth cycles and arrives around 2055.

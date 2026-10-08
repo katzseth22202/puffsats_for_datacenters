@@ -22,48 +22,65 @@ first grant can buy.
 
 | #   | Risk                                   | Deciding number                              | Margin                                      | Cheapest test                                  | Status                       |
 | --- | -------------------------------------- | -------------------------------------------- | ------------------------------------------- | ---------------------------------------------- | ---------------------------- |
-| R1  | Departure chamber efficiency and wall  | H2 0.858, CH4 0.538 (88%, 80% of ceiling)    | At 50% of ceiling, H2 doubles slower than methalox | Independent chamber hydrocode; pulsed-heat coupons | Open, no brief          |
+| R1  | Departure chamber efficiency and wall  | CH4 0.539 (80% of ceiling); dry-wrap fling 1.26 margin | At 50% of ceiling, CH4 does not grow  | Kevlar ring fling; hydrogen uptake through pitch | Open, no brief         |
 | R2  | Plate jet efficiency                   | `eta_jet` 0.60, downside 0.57                | Open flat plate gives 0.33 to 0.40          | Independent hydrocode of the spray cup         | Open, single code            |
 | R3  | Spray and pulse shock, not pass through | Mean free path against a ~4 m cloud         | Our estimate is 4 or more orders of magnitude | Companion computes Kn for the arriving gas   | Likely closed, request upstream |
-| R4  | Plate face under repeated shock        | 0.9 to 2.5 GPa peak, 2.5 GPa allowable       | None at the top of the range                | Repeated-shock coupons, maraging 300/350       | Open, first brief            |
+| R4  | Plate face under repeated shock        | 0.9 to 2.5 GPa peak, 2.5 GPa allowable       | None at the top; an unmerged pulse cracks the floor | Repeated-shock coupons, maraging 300 with alumina film | Open, first brief |
 | R5  | Pitch film and its vapor shield        | 4 to 6 kg a pulse, 28 to 33 without shield   | Factor of 6 rests on the shield             | Pulsed plasma or arc jet on coated steel       | Open                         |
 | R6  | Recombination while gas presses        | Water returns 23 to 31% of bond energy by 250 µs | Argon is an equilibrium argument only   | Finite-rate chemistry in the R2 hydrocode      | Open, inside R2              |
 | R7  | Terminal guidance                      | 0.5 m footprint offset; 2 cm rod clearance   | Not simulated                               | Monte Carlo error budget, release to impact    | Open, second brief           |
 | R8  | Skirt sliding seal                     | 14 to 140 MJ a pulse leaks, 1 to 10 mm gap   | Not stated as a share of the pulse          | Inside R2, then a seal bench test              | Open, fold into R4 brief     |
 | R9  | PuffSat coast and approach             | 1 sphere in 170 punctured per 16-day coast   | Sized into the reserve                      | Hypervelocity impact on the Echo II laminate   | Open, low                    |
-| R10 | Launch price                           | Lob at $26.6 per kg lofted                   | About three fifths of $122/kg               | Launch-cost analyst review                     | Open, after R1 to R4         |
+| R10 | Launch price                           | Lob at $26.6 per kg lofted                   | More than half of methane's $162/kg         | Launch-cost analyst review                     | Open, after R1 to R4         |
 | R11 | Safety and dual use                    | None in the paper                            | Not addressed                               | A written answer, not a test                   | Open, unanswered             |
 
 ## R1. Departure chamber efficiency and wall survival
 
-**Number.** The simulated chambers reach 0.858 for hydrogen and 0.538 for methane, 88% and
-80% of their chemistry ceilings of 0.978 and 0.669 (`sec:exponential_mass_growth`). Both are
-modeled by one code. The paper calls every chamber efficiency a requirement.
+**Number.** The methane chamber reaches 0.539, 80% of its chemistry ceiling of 0.669
+(`sec:exponential_mass_growth`). The hydrogen chamber reaches 0.858, 88% of 0.978, but its
+wall has not been shown to survive its blast, so the paper proposes methane. Both efficiencies
+come from one code, and the paper calls every chamber efficiency a requirement.
 
 **Why it ranks first.** It is the largest lever in the growth ledger, and the cost section
-says the chamber decides the case. Behind the spray cup, hydrogen doubles in 2.03 years when
-solved, 2.66 at 70% of ceiling and 8.26 at 50%. Methalox, the incumbent, doubles in 7.92. A
-hydrogen chamber at half its ceiling does worse than methalox.
+says the chamber decides the case. Behind the spray cup, the methane chamber doubles in 2.78
+years when solved and 3.64 at 70% of ceiling. At 50% it does not grow, and after ten years its
+fleet is 0.65 of what it launched. Methalox, the incumbent, doubles in 7.92.
 
-**Survival items inside it** (`sec:rocket_nozzles`, `sec:nozzle_puffsats`):
+**The wall** (`sec:rocket_nozzles`, `sec:nozzle_puffsats`). The solved blast replaced the
+paper's earlier wall. The bonded carbon overwrap peels at a 0.12 to 0.22 GPa spike, so the
+chamber now bulges to a 3.0 m radius at a 10 kg frozen methane plug and carries a 10 mm Cr-Mo
+shell under a dry Kevlar 49 wrap. One 5 kg chamber at 2 Hz departs a 780 to 820 t stack on 53 to
+63 t of hardware. What is left open:
 
-- The copper liner's surface peaks at 370 to 1110 K against copper's 1356 K melting point.
+- The wall beside the plug peaks at 0.67 GPa. The peaks rose 15 to 25% each time the grid cells
+  were halved, so the levels are not converged. The comparisons between shapes hold.
+- The wrap's outer layers stretch at most 1.68% in the 2.5 kg chamber against Kevlar 49's 2.4%
+  break. In the 5 kg chamber the margin falls from 1.43 to 1.26.
+- The wall was checked for 4200 pulses. Departures fire 2900 to 4500, so the longest run 6% past
+  the check.
+- Hydrogen from the dissociated charge still reaches the shell. The alumina film goes under the
+  pitch as a second defense, and it has not been tested against pulsed atomic hydrogen (shared
+  with R4).
 - Spray cooling is not assured. A liquid on a surface far above its boiling point can float on
-  its own vapor. At the 350 MJ high edge of the flux, the 230 MJ hydrogen charge cannot take
-  back all the heat.
-- The port sees about 0.2 GPa for microseconds, four times the peak the shell is sized for.
-  The shell's response has not been checked.
-- The foam plug's depth comes from a penetration law derived for dense targets. The paper says
-  it needs a shock-physics simulation.
+  its own vapor.
+- The hydrogen chamber is unresolved. Its blast reaches about 2.95 GPa, at steel's spall
+  strength, and it has not been run with the bulge or the dry wrap.
 
-**Cheapest test.** An independent hydrocode run of one chamber blowdown. Pulsed-heat tests on
-GRCop-84 coupons at the computed flux.
+**Cheapest test.** The parent lists a bench ladder that needs no full-size chamber, because the
+fling stretch does not depend on size and the blast scales by the cube root of its energy. In
+order of cost: Kevlar 49 rings cycled at 1 to 2% strain past 5000 cycles; ring fling by
+electromagnetic expansion or an exploding wire; gas-gun spall of the thin liner; hydrogen
+uptake through pitch, with and without the alumina film, in a reflected-shock tube. A subscale
+chamber with wall gauges and a detonating cord standing in for the rod then checks the blast
+solution itself.
 
-**Who.** A rocket chamber thermal group, or a hydrocode group.
+**Who.** A shock-physics group with a ring-expansion or exploding-wire rig, for the wrap. A
+hydrogen-permeation group, for the film.
 
-**Status.** Open. No brief covers it. The old Brief A (magnetic nozzle, Ahedo and Merino)
-aimed at this lever, but the paper now uses a walled chamber and calls the magnetic nozzle far
-from maturity. Brief A needs replacing, not sending.
+**Status.** Open. No brief covers it yet. The bench ladder makes one possible, since the first
+rungs fit an existing rig. The old Brief A (magnetic nozzle, Ahedo and Merino) aimed at this
+lever, but the paper now uses a walled chamber and calls the magnetic nozzle far from
+maturity. Brief A is retired.
 
 ## R2. Plate jet efficiency
 
@@ -75,8 +92,8 @@ reaches about 0.70 (`sec:plate_liquid_spray`).
 two-dimensional runs on a simpler gas. The parent bibliography's own note on the simulation
 reads "Preliminary single-code result; pending independent hydrocode validation".
 
-**Consequence.** Smaller than R1. Behind a solved hydrogen chamber, 0.60 doubles in 2.03
-years and 0.70 in 1.80. It matters more for credibility than for the ledger, because every
+**Consequence.** Smaller than R1. Behind the solved methane chamber, the spray cup's 0.60
+doubles in 2.78 years and the plug's 0.70 in 2.38. It matters more for credibility than for the ledger, because every
 plate number in the paper rests on it. An open flat plate reaches only 0.33 to 0.40, so the
 bowl and skirt carry most of the gain.
 
@@ -115,13 +132,26 @@ when an experiment is wanted.
 **Number.** With a spray cloud about 4 m deep standing about 1 m off the floor, the face sees
 0.9 to 2.5 GPa for 1 to 30 µs. The allowable is 2.5 GPa (`sec:plate_face`).
 
-**Margin.** None at the top of the range. The allowable is set below the measured Hugoniot
-elastic limit (HEL) of maraging 350, 4.8 GPa give or take 2.0. The low end of that range,
-2.8 GPa, sits just above the allowable.
+**Margin.** None at the top of the range. The parent names maraging 300 for its toughness,
+66.5 MPa m^1/2 against 350's 33. The only measured Hugoniot elastic limit (HEL) is for 350,
+4.8 GPa give or take 2.0, and the low end of that range, 2.8 GPa, sits just above the
+allowable. Nobody has measured 300's.
 
 **What the HEL does not cover.** It is a single-shock measurement. A push applies about 1060
 to 1500 shocks (the paper uses both counts, see below). Damage that builds up over repeated
 microsecond shocks is a separate question from where a single shock yields.
+
+**The merge is a structural requirement.** The merged pulse peaks at 0.89 GPa and rises over
+about 36 µs, slower than the 10.6 µs a stress wave takes to cross the 30 mm floor and return,
+so the floor never goes into tension. A PuffSat layer that arrives unmerged rises in half a
+microsecond and reflects off the back face as up to 3.6 GPa of tension. Repeated, that grows a
+0.5 mm flaw in maraging 300 to critical size within 0 to 1053 pulses. A failed merge must be
+caught within a few pulses, which ties this risk to R3.
+
+**Hydrogen.** The water PuffSat dissociates at the face every pulse, and maraging is among the
+steels hydrogen embrittles most. The defense is a sub-micron alumina film on the floor and the
+skirt's liner, under the pitch. A 1 µm alumina coat cut deuterium permeation through a fusion
+steel by up to 1000 times, but against gas, not pulsed atomic hydrogen.
 
 **Dependencies.**
 
@@ -131,9 +161,10 @@ microsecond shocks is a separate question from where a single shock yields.
   footprint breaks the match, which is why aiming is held to about 0.5 m (R7).
 - The bulk must stay below the 480 °C aging temperature (R5).
 
-**Cheapest test.** Repeated plate-impact or laser-driven shocks on maraging 300 and 350
-coupons at 2.5 GPa and 1 to 30 µs, run to the push's pulse count, then sectioned for spall
-and microstructure.
+**Cheapest test.** Repeated plate-impact or laser-driven shocks on maraging 300 coupons, bare
+and under the alumina film, at 2.5 GPa and 1 to 30 µs, run to the push's pulse count, then
+sectioned for spall and microstructure. The same rig at a sub-microsecond rise time measures
+how fast an unmerged pulse kills the floor. The film's hydrogen test is shared with R1.
 
 **Who.** A shock-compression group.
 
@@ -147,8 +178,8 @@ burns 4 to 6 kg a pulse. With no vapor shield it loses 28 to 33 kg, which would 
 steel peaks at 400 and 342 K, below maraging's 753 K aging limit (`sec:plate_face`).
 
 **Margin.** The factor of about six between shielded and unshielded loss rests on the shield.
-If it fails, the paper charges the extra pitch as launched mass, adding $4 to $5 per kilogram
-for the solved chambers and $25 for methalox. The paper does not say whether the steel
+If it fails, the paper charges the extra pitch as launched mass, adding $4 per kilogram
+for the hydrogen chamber, $8 for the methane chamber and $25 for methalox. The paper does not say whether the steel
 temperatures hold without the shield.
 
 **Cheapest test.** A pulsed plasma gun or an arc jet on pitch-coated maraging coupons at 22 to
@@ -235,13 +266,14 @@ of the cycle.
 ## R10. Launch price and the cost table
 
 **Number.** The lob at $26.6 per kilogram lofted is the only price with a source, and it is
-about three fifths of the solved chambers' $122 to $124 per kilogram at L1
-(`sec:l1_cost`). Every other price is a hypothesis.
+more than half of the methane chamber's $162 per kilogram at L1 (`sec:l1_cost`). Every other
+price is a hypothesis, including the chamber's, which is scaled from a lighter chamber by mass.
 
-**Margin.** With every price pessimistic at once, the solved chambers cost $508 to $563, just
-over Starcloud's $500. At Musk's $2 million a Starship flight, Starship reaches L1 for $50 to
-$85 and no PuffSat design beats it unless the lob cheapens too. Counting the seed at even odds
-raises the break-even to $192 to $205 on the cheapest seed.
+**Margin.** With every price pessimistic at once, the methane chamber costs $1073, more than
+methalox's $885, because its $594 million chamber is two thirds of the bill. At Musk's
+$2 million a Starship flight, Starship reaches L1 for $50 to $85 and no PuffSat design beats
+it. Counting the seed at even odds raises the methane chamber's break-even to $340 on the
+cheapest seed, under Starcloud's $500 and over Suncatcher's $200, and $810 on the dearest.
 
 **Who.** A launch-cost analyst, sent with the companion proposal rather than a physics brief.
 The question is whether a booster 10 to 20% larger than Super Heavy, flown straight up to
@@ -272,7 +304,8 @@ Cheapest first, and every item fits inside an existing facility or code:
 1. An independent hydrocode run of the spray cup, covering R2, R3, R6 and R8.
 2. Repeated-shock coupons of maraging steel (R4) and pulsed-heat coupons of pitch-coated
    steel (R5).
-3. Pulsed-heat coupons of GRCop-84 and a chamber blowdown run (R1).
+3. The chamber wall's first rungs: Kevlar ring cycling and fling, and hydrogen uptake through
+   pitch with and without the alumina film (R1, and R4 for the film).
 4. A guidance error budget (R7), which costs the author's time only.
 
 ## Open items in this file

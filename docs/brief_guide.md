@@ -31,8 +31,8 @@ Send plain text, not HTML with inline images. Never attach `.tex` source.
 
 `templateArxiv.tex` at the repository root is a separate document in the parent paper's arXiv
 format, carrying the orbital-data-center demand story at length. It goes to recipients who can
-judge demand and siting. It is not attached to Brief A or Brief B, and its styling is not a
-precedent for what those briefs attach. See **Companion proposal** in `CONTEXT.md`.
+judge demand and siting. It is not attached to a physics brief, and its styling is not a precedent
+for what those briefs attach. The R10 cost brief is the exception, sent with it. See **Companion proposal** in `CONTEXT.md`.
 
 The two prohibitions below, on data centers and on the paper template, are scoped to the
 briefs. They are not repealed by the existence of the companion.
@@ -68,106 +68,78 @@ lowered standards. After it, as calibration.
 be writing to?" Near-costless for them, and it turns a "not my area" non-reply into a useful
 one. A forwarded introduction from inside their institution is worth more than any attachment.
 
-## Brief A: magnetic nozzle efficiency. Send first.
+## Where briefs come from
 
-**To:** Eduardo Ahedo and Mario Merino, Universidad Carlos III de Madrid.
+Each brief is drawn from one risk in `homework/risk_register.md`, and carries that risk's
+deciding number and cheapest test. The register is the homework. A brief asks the recipient
+to correct one entry, not to read the register.
 
-**Why first:** the homework is already written, in your own glossary. This brief costs an
-afternoon and carries the lowest risk of being mistaken for slop, because you cite their result
-accurately before questioning its range. They are already in your bibliography, so you need no
-introduction.
+The order is set by what a funder needs to see answered first.
 
-**The question.** Your architecture requires `eta_jet` near 0.77 for the lunar cycle, near
-0.89 for the methalox rebuttal at its pessimistic anchor, and near 0.7 for the scale energy
-case. None is computed from a nozzle model. All are requirements. Their plume efficiency of
-0.63 to 0.83 is power-like, so its square root bounds `eta_jet`, giving a divergence-only
-ceiling near 0.79 to 0.91. Ask whether 0.77 sits defensibly under that ceiling.
+1. **R4, plate face under repeated shock.** First. The skirt and its sliding seal ride in it
+   as one sentence, not a brief of their own.
+2. **R7, terminal guidance.** Second, and only after the Monte Carlo error budget exists.
+3. **R10, launch price.** Last, to a launch-cost analyst, sent with the companion proposal.
 
-**The scope mismatch, which you supply yourself.** Their model is collisionless,
-electron-magnetized, current-free and low-beta. Your pulse is collisional. You wrote that
-caveat in your own glossary, so state it and ask the two questions it raises. Has the analysis
-been extended to a collisional pulse? If not, is the correction direction known even
-qualitatively?
+R1, the chamber wall, has no place in the order yet. The parent's bench ladder makes a brief
+possible, since its first rungs fit an existing rig, but whether it goes before or after R7
+is not decided.
 
-**Also worth one sentence.** You distinguish Nakashima's plume efficiency from Schilling's
-`eta_th`, and note that only the latter is the same quantity as your `eta_jet`. That
-distinction is real literature reading and it will register.
+## Brief R4: the plate face. Send first.
 
-**No figure.** The question concerns a scalar's scope conditions. A diagram would be padding.
+**To:** a shock-compression group that has published repeated-shock, spall or HEL work on
+high-strength steel. Not yet chosen. Choosing them is homework, and the brief names their
+result.
 
-**Budget.** Under 300 words in the body. The attachment can be half a page or omitted.
+**The question.** The spray cup's maraging 300 floor takes 0.9 to 2.5 GPa for 1 to 30 µs, about
+1060 to 1500 times a push, against a 2.5 GPa allowable. The only measured HEL is maraging
+350's, 4.8 GPa give or take 2.0. Ask whether damage builds up over a thousand microsecond shocks
+below the single-shock HEL, and whether their data or rig can say.
 
-## Brief B: does the spray cushion form. Send the same week.
+**The homework to carry.**
 
-**To:** S. Langendorf and colleagues, Plasma Liner Experiment, Los Alamos National Laboratory.
-HyperJet Fusion Corporation is the commercial side. Check Scott Hsu's current affiliation
-before writing to him; he moved into energy-policy roles and is a referral source rather than a
-bench collaborator.
+- The merge argument. The merged pulse rises over about 36 µs, slower than the 10.6 µs round
+  trip through the 30 mm floor, so the floor never goes into tension. Ask them to correct it.
+- The failure case, owned. An unmerged pulse rises in half a microsecond and the companion
+  finds it cracks the floor within 0 to 1053 pulses. Say that a failed merge is caught and the
+  push stopped within a few pulses, and that this is a requirement.
+- The hydrogen barrier, as the second question if the first gets a reply. A sub-micron alumina
+  film under the pitch, tested elsewhere against gas but not against pulsed atomic hydrogen.
+- One sentence on the skirt. It is fixed to the vehicle so it never takes the floor's kick,
+  which would launch a 1 to 3 GPa wave into a bolted joint every pulse. The price is a sliding
+  seal.
 
-**Why them:** they have collided argon jets at 50 km/s, inside your 45 to 68 km/s band, and
-measured shock formation between them at ion temperatures up to 30 eV. LANL publicly solicited
-commercialization partners for PLX in September 2025, so the programme is in a receptive
-posture.
+**One figure, optional.** The parent's `plate_stack` section with its face inset, if the
+attachment is sent. The question does not need it.
 
-**The question.** At your post-collision state, do two counter-streaming flows shock, or do
-they interpenetrate? If they interpenetrate there is no cushion, no spray leverage, and the
-plate question does not arise. This is the concept's gate, which is why this brief goes early.
+**Budget.** Under 300 words in the body.
 
-**Lead with the state, not the velocity.** Their archive and their intuition are indexed by
-temperature, density and composition. Give those and derive the closing speed from them. Doing
-it the other way round invites the correct objection that a 46 km/s facility ceiling does not
-cover 68 km/s, when the ceiling may not bind you at all.
+## Retired briefs
 
-**Homework to carry, three items.**
+**Brief A, magnetic nozzle (Ahedo and Merino, UC3M).** Retired. The paper now departs on a
+walled chamber and calls the magnetic nozzle far from maturity, so the plume-efficiency
+question no longer carries the case. R1 is the lever it aimed at.
 
-- Mean free path at your post-collision density against the interaction length, benchmarked
-  against their measured shock formation. One back-of-envelope calculation with a published
-  reference point.
-- Radiative loss already bounded from meteor luminous efficiency: 0.5 to 6 percent of kinetic
-  energy for small meteoroids, 0.6 to 8 percent for 2.4 to 87 kg bodies, with the visible band
-  carrying only 30 to 50 percent of the total. Order 1 to 10 percent overall. State the
-  transfer caveats, since meteors ablate a solid into gas and radiate from an unconfined
-  optically thin volume. Use it to say you are treating radiation as secondary, which is why
-  you are asking about shock formation instead.
-- The composition question, presented as a choice rather than an open request. Water recoups
-  its dissociation energy if recombination outruns expansion, which high density at cooling
-  favours because recombination is three-body. Argon has no dissociation modes and pays
-  ionization instead. Ask which they have better data for at your state.
+**Brief B, spray cushion (Langendorf and colleagues, LANL PLX).** Retired as a gate. The
+mean-free-path check in `todos/mfp_companion_request.md` should settle whether the flows shock,
+and our own estimate (R3) says they do by four or more orders of magnitude. PLX stays the
+referral if an experiment is wanted. Three pieces of its homework remain useful wherever the
+plate's efficiency is defended: the meteor bound on radiative loss, the contamination clause
+(mass dilution is not radiative dilution), and the answer to the opposing-jet objection.
 
-**The contamination revision, owned in one clause.** You assumed a high slug ratio `k` diluted
-trace material and you no longer think it does, because mass dilution is not radiative
-dilution. Water's oxygen plus plastic carbon makes CO, a severe vacuum-ultraviolet radiator,
-and metal resonance lines matter at parts per million. Meteor spectra confirm it: emission is
-led by metal lines, not by the ablation layer.
+## Checklist before any brief goes out
 
-That single clause is the most anti-slop sentence available to you. It demonstrates knowing
-which of your own beliefs moved and why, which is the property slop structurally lacks.
-
-**Preempt the opposing-jet objection.** Hypersonics sprays gas forward from a stagnation point
-to reduce wall loading, reporting up to 77 percent peak heat-flux reduction and 30 to 45
-percent drag reduction. A reviewer will raise it in one line. Your answer is that those cases
-face an unlimited free stream and want the shock pushed away, while your incoming plume is
-finite and you want all of its momentum plus the sprayed mass in the exhaust, where for fixed
-energy `p = sqrt(2mE)` rewards the heavier, slower merged flow. Put the answer in the
-document.
-
-**One figure, a labeled line diagram.** Two counter-streaming flows, the interaction region,
-the plate downstream, velocity vectors, and a length scale. Not a rendering. The existing repo
-images were made for worldbuilding and illustration-style art reads as concept art to a plasma
-physicist.
-
-**Budget.** Under 400 words in the body, one page attached.
-
-## Checklist before either brief goes out
-
-- Every number defensible cold, without a model.
+- Every number quoted from `homework/risk_register.md`, and defensible cold, without a model.
 - Every number phrased as a requirement, unless a citation or a simulation backs it.
 - Provenance paragraph after the technical content, not before.
 - Referral request as the closing line.
 - Body self-contained, so the attachment is optional.
 - No em-dashes, per the stylebook in `CLAUDE.md`.
 
-## What must not appear in either brief
+## What must not appear in a physics brief
+
+The R10 cost brief travels with the companion proposal, so the first two items below do not
+apply to it.
 
 - The Jupiter growth multiples, the compounding table, or Mass Interest. They read as
   speculative finance and will sink a physics email.
