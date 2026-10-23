@@ -39,6 +39,13 @@ _Avoid_: attaching it to a physics brief (a propulsion recipient cannot judge de
 it carries no bounded ask and is not addressed to one named person; treating its arXiv styling
 as a precedent for brief attachments.
 
+**Design concept** (settled 2026-10-23):
+What the companion proposal calls itself. The architecture is proposed and partly analyzed, and
+whether it works turns on open questions the paper puts to specialists.
+_Avoid_: "feasibility study" (it claims the analysis that settles viability, which is what the
+paper asks specialists to supply); "speculative proposal" (a credibility discount placed ahead of
+the claim; see **Provenance disclosure**).
+
 **Inherited citation** (settled 2026-09-20):
 A bibliography entry copied down from `references.bib` in `katzseth22202/Balloon-Pulse-Propulsion`
 with its key and its `note` field intact, rather than written fresh here. The parent is a
