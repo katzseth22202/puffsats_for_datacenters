@@ -126,9 +126,9 @@ Once the loop is running, only two burns in each cycle use carried propellant, t
 \section{The Loop Without The Sun}\label{sec:no_sun_loop}
 The same plates can fly a loop that never dives. The ship goes to Jupiter and comes straight home, and the departing ship's own PuffSats become the next cycle's streams. The parent flew this loop on real ephemerides, with the same push plate and bowl~\cite{katz2026aim}. It avoids every part of the cycle that happens near the Sun. It pays for that in growth, and \autoref{tab:no_sun_loop} sets out the trade.
 
-The Sun is what buys the dive its return speed. Without it, the ship must leave Earth faster, at 11.9 to \SI{14.6}{\kilo\meter\per\second} of excess speed rather than \SI{10.24}{\kilo\meter\per\second}. The departure burn then runs longer, and the ship swings farther around Earth during it. The departure stream also meets the ship nearly head-on, so the impactors' own momentum points against the thrust. The returning sheets are slower, and a plate's exhaust speed grows with the speed of the stream that strikes it. The parent finds that the heavier spring plates cost this loop the most. Its best departure is 0.5~g, which halves the burn time.
+The Sun is what buys the dive its return speed. Without it, the ship must leave Earth faster, at 11.9 to \SI{14.6}{\kilo\meter\per\second} of excess speed rather than \SI{10.24}{\kilo\meter\per\second}. The departure burn then runs longer, and the ship swings farther around Earth during it. The departure stream also meets the ship nearly head-on, so the impactors' own momentum points against the thrust. The returning sheets are slower, and a plate's exhaust speed grows with the speed of the stream that strikes it. The plates are the same \SI{70}{\tonne} assembly on both loops, since the push sets its mass and the push is the same. But the Jupiter-only ship leaves Earth a third to two thirds as heavy, so the assembly is 20 to 38\% of it against 12\% of the dive's. Its best departure is 0.5~g, which halves the burn time.
 
-Both loops fly the same Earth hardware. The push plate and the departure bowl are the same, and so is the approach to Earth, where co-flyers guide each stream through its coast and GNSS takes over for the last minutes. What the slower loop removes is the Sun wave. No disks or Sun bowl fly, and no PuffSat has to be aimed far from Earth.
+Both loops fly the same Earth hardware. The push plate and the departure bowl are the same, and so is the approach to Earth, where co-flyers guide each stream through its coast and GNSS takes over for the last minutes. The slower streams get a few more minutes of GNSS each, 10 to 13 against 7 to 9. What the slower loop removes is the Sun wave. No disks or Sun bowl fly, and no PuffSat has to be aimed far from Earth.
 
 \begin{table}[!htpb]
     \centering
@@ -143,7 +143,8 @@ Both loops fly the same Earth hardware. The push plate and the departure bowl ar
         Push stream at \SI{400}{\kilo\meter} & 54 to \SI{65}{\kilo\meter\per\second} & \SI{99}{\kilo\meter\per\second} \\
         Aiming far from Earth & none & disk train at perihelion, estimated but not simulated \\
         Sun hardware & none & disks, sunshade, Sun bowl and carrier, at a depth Parker has flown \\
-        Charge bonds & take a larger share of each slower collision & about 12\% of the sheet's energy \\
+        Plate assembly & \SI{70}{\tonne}, 20 to 38\% of the departing ship & \SI{70}{\tonne}, 12\% of the departing ship \\
+        Charge bonds, share of the energy dissipated & push 24 to 35\%, bowl 37 to 46\% & push 13\%, bowl 30 to 32\% \\
         \bottomrule
     \end{tabularx}
     \caption{The Jupiter-only loop against the Sun dive, on the same plates and charges~\cite{katz2026aim}. Growth is per three Earth--Jupiter synodic periods, so loops that fly two-synodic windows compare on the same clock. The Jupiter-only loop mixes two- and three-synodic windows and flies its best departure, 0.5~g. The bowl struck nearly head-on is interpolated from simulated angles.}
@@ -152,7 +153,7 @@ Both loops fly the same Earth hardware. The push plate and the departure bowl ar
 
 This paper counts growth in kilograms. In dollars the gap is wider, because a startup's capital is expensive and the faster loop repays the costly seed launch sooner. That is why the Sun dive is the main scenario. The parent prices both loops~\cite{katz2026aim}.
 
-A bond-free argon charge would recover more of the bond toll in this loop than in the dive, because its collisions are slower. It needs a cryostat on a three-year loop, and its effect on growth has not been computed.
+The charges' bonds take a larger share of this loop's slower collisions, so a better charge helps it more than the dive. It does not close the gap. If every bond in the bowl's charges were returned, the loop would grow 2.22 times per cycle, against 3.52 for the dive on the same terms. Argon is not that charge. The impact simulation finds it no better than polyethylene on this loop's push, and no better than water on its bowl, because hot argon radiates its heat into the plate face. Water is the candidate. Its bonds break but recombine before the gas leaves the plate, and it needs no cryostat. Its effect on growth has not been computed.
 
 \section{AI Use Disclosure}\label{sec:transparency}
 The underlying ideas, physical arguments, and proposed architecture in this paper and in \textit{Aim Is All You Need}~\cite{katz2026aim} are my own. The architecture began as hard-science-fiction worldbuilding, which I developed in dialogue with AI tools. I used Claude Code~\cite{claude_code}, Codex~\cite{codex}, Grok~\cite{grok}, Gemini~\cite{gemini}, and Microsoft Copilot~\cite{copilot} for formatting, coding, math and physics derivations and sanity checks, image creation, bibliography, and proofreading support. I know that's not enough, which is why I'm seeking advice and a sanity check on whether this is worth pursuing.
