@@ -86,7 +86,7 @@ PuffSat Pulsed Propulsion is a kinetic analogue of Project Orion. It pushes a sh
 
 \paragraph{How it differs from Orion.} Orion's pulse units could not simply be detonated against the pusher plate. Instead, radiation heated a shaped tungsten propellant mass, which expanded into a plasma jet that crossed a gap of tens of meters before striking the plate~\cite{balcomb1970nuclear,dyson2002project_orion}. A guided impactor needs no such radiation-to-jet converter, because it delivers its energy at the point of impact. The parent assumes that the resulting fireball stays opaque, trapping most of its energy long enough to pass it to the plate rather than radiating it away. Each pulse has a selectable mass, so the design can trade impulse per pulse against pulse rate and reduce peak loads on the plate's spring. Pellet-beam proposals also push a ship with a stream of projectiles, and most aim at interstellar speeds~\cite{singer1979interstellar,willis1994momentum,nordley2001interstellar,kare2001sailbeam,davoyan2023pelletbeam,nordley2015massbeam}. They throw their projectiles with a mass driver or with light, from a laser or the Sun, while PuffSats gain their speed from the gravity of Jupiter and the Sun and lift \SI{1500}{\tonne} launch units within the solar system.
 
-\paragraph{Why dive at the Sun.} The fleet could grow on Jupiter alone. Flown on the same plates with no dive, that loop grows 1.65 times per three Earth--Jupiter synodic periods (\SI{3.28}{\year}). Adding the dive raises the growth to 3.36 times. The ship meets the graphite disks deep in the Sun's gravity well, where the Oberth effect turns their \SI{9.8}{\kilo\meter\per\second} into a much larger gain in return speed. Deeper dives grow faster. At \SI{4}{R_\odot} the fleet grows 4.99 times per cycle and doubles in \SI{1.41}{\year}. The baseline stops at \SI{9.86}{R_\odot} because Parker Solar Probe has flown that depth and kept working~\cite{nasa2024_parker_survives}.
+\paragraph{Why dive at the Sun.} The fleet could grow on Jupiter alone. Flown on the same plates with no dive, that loop grows 1.65 times per three Earth--Jupiter synodic periods (\SI{3.28}{\year}). Adding the dive raises the growth to 3.23 times (\autoref{sec:no_sun_loop}). The ship meets the graphite disks deep in the Sun's gravity well, where the Oberth effect turns their \SI{9.8}{\kilo\meter\per\second} into a much larger gain in return speed. Deeper dives grow faster. At \SI{4}{R_\odot} the fleet grows 4.88 times per cycle and doubles in \SI{1.43}{\year}. The baseline stops at \SI{9.86}{R_\odot} because Parker Solar Probe has flown that depth and kept working~\cite{nasa2024_parker_survives}.
 
 The cycle's numbers come from simulated impacts and a preliminary model that charges every mass cost, counted in kilograms rather than dollars. Three questions need to be put to specialists. The first is whether each PuffSat can be aimed as precisely as the plates require. The second is whether a PuffSat's energy couples efficiently into a charge much heavier than itself. The third is whether the plates and the PuffSats survive the loads computed for them.
 
@@ -122,6 +122,37 @@ The two Earth streams close at different speeds because they come home at differ
 \paragraph{The Sun boost.} The disks meet the ship head-on at perihelion, closing at about \SI{392}{\kilo\meter\per\second}. They strike charges in a third bowl, like the departure's but with no hole, since the disks arrive along its axis. The boost is \SI{9.8}{\kilo\meter\per\second}. Bought at a perihelion speed of \SI{196}{\kilo\meter\per\second}, it leaves the \SI{60}{\kilo\meter\per\second} return. The ship then releases \SI{392}{\tonne} as Kapton sheets, which cross Earth \SI{3.28}{\year} after the ship left and become the next cycle's push and departure streams. The Sun bowl is kept as dead mass.
 
 Once the loop is running, only two burns in each cycle use carried propellant, the methalox turn at apoapsis and the carrier burn at Jupiter. Every impulse a PuffSat delivers lands on a plate.
+
+\section{The Loop Without The Sun}\label{sec:no_sun_loop}
+The same plates can fly a loop that never dives. The ship goes to Jupiter and comes straight home, and the departing ship's own PuffSats become the next cycle's streams. The parent flew this loop on real ephemerides, with the same push plate and bowl~\cite{katz2026aim}. It avoids every part of the cycle that happens near the Sun. It pays for that in growth, and \autoref{tab:no_sun_loop} sets out the trade.
+
+The Sun is what buys the dive its return speed. Without it, the ship must leave Earth faster, at 11.9 to \SI{14.6}{\kilo\meter\per\second} of excess speed rather than \SI{10.24}{\kilo\meter\per\second}. The departure burn then runs longer, and the ship swings farther around Earth during it. The departure stream also meets the ship nearly head-on, so the impactors' own momentum points against the thrust. The returning sheets are slower, and a plate's exhaust speed grows with the speed of the stream that strikes it. The parent finds that the heavier spring plates cost this loop the most. Its best departure is 0.5~g, which halves the burn time.
+
+Both loops fly the same Earth hardware. The push plate and the departure bowl are the same, and so is the approach to Earth, where co-flyers guide each stream through its coast and GNSS takes over for the last minutes. What the slower loop removes is the Sun wave. No disks or Sun bowl fly, and no PuffSat has to be aimed far from Earth.
+
+\begin{table}[!htpb]
+    \centering
+    \small
+    \begin{tabularx}{\linewidth}{lLL}
+        \toprule
+        & Jupiter only & Sun dive, \SI{9.86}{R_\odot} \\
+        \midrule
+        Growth per \SI{3.28}{\year} & 1.65 & 3.23 \\
+        Doubling time & \SI{4.56}{\year} & \SI{1.94}{\year} \\
+        Departure & 0.5~g, leaving at 11.9 to \SI{14.6}{\kilo\meter\per\second}, stream at 161 to \ang{180} & 0.25~g, leaving at \SI{10.24}{\kilo\meter\per\second}, stream at \ang{130} \\
+        Push stream at \SI{400}{\kilo\meter} & 54 to \SI{65}{\kilo\meter\per\second} & \SI{99}{\kilo\meter\per\second} \\
+        Aiming far from Earth & none & disk train at perihelion, estimated but not simulated \\
+        Sun hardware & none & disks, sunshade, Sun bowl and carrier, at a depth Parker has flown \\
+        Charge bonds & take a larger share of each slower collision & about 12\% of the sheet's energy \\
+        \bottomrule
+    \end{tabularx}
+    \caption{The Jupiter-only loop against the Sun dive, on the same plates and charges~\cite{katz2026aim}. Growth is per three Earth--Jupiter synodic periods, so loops that fly two-synodic windows compare on the same clock. The Jupiter-only loop mixes two- and three-synodic windows and flies its best departure, 0.5~g. The bowl struck nearly head-on is interpolated from simulated angles.}
+    \label{tab:no_sun_loop}
+\end{table}
+
+This paper counts growth in kilograms, not dollars. The money matters through the seed. The first cycle has no returning stream, so its ships leave on expendable Starships, and that is the costliest launch the fleet ever makes. The Jupiter-only seed must also leave faster, at \SI{12}{\kilo\meter\per\second} rather than \SI{10.24}{\kilo\meter\per\second}. A startup pays for its seed with capital that expects a high return, so how fast the fleet grows to repay it is likely to matter economically more than the gap in kilograms suggests. The parent prices both loops in detail~\cite{katz2026aim}.
+
+A bond-free argon charge would recover more of the bond toll in this loop than in the dive, because its collisions are slower. It needs a cryostat on a three-year loop, and its effect on growth has not been computed.
 
 \section{AI Use Disclosure}\label{sec:transparency}
 The underlying ideas, physical arguments, and proposed architecture in this paper and in \textit{Aim Is All You Need}~\cite{katz2026aim} are my own. The architecture began as hard-science-fiction worldbuilding, which I developed in dialogue with AI tools. I used Claude Code~\cite{claude_code}, Codex~\cite{codex}, Grok~\cite{grok}, Gemini~\cite{gemini}, and Microsoft Copilot~\cite{copilot} for formatting, coding, math and physics derivations and sanity checks, image creation, bibliography, and proofreading support. I know that's not enough, which is why I'm seeking advice and a sanity check on whether this is worth pursuing.
